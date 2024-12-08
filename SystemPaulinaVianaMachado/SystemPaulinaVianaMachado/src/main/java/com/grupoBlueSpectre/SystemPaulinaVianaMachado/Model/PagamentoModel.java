@@ -1,5 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.StatusPagamento;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.TipoPagamento;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,6 +26,8 @@ public class PagamentoModel {
 
     private double valorPago;
     private String caminhoComprovante;
-    private String formaPagamento;
     private String recebedorPagamento;
+    private StatusPagamento statusPagamento;
+    private TipoPagamento formaPagamento;
+
 }

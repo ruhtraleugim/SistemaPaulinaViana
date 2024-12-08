@@ -1,6 +1,9 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
 import java.util.Date;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.TipoProduto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,4 +28,5 @@ public class ProdutoModel {
     private String descricaoProduto;
     private String nomeProduto;
     private Date validadeProduto;
+    private TipoProduto tipoProduto;
 }
