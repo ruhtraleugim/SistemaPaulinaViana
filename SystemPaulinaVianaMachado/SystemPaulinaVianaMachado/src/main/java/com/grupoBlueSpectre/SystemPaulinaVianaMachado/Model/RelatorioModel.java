@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,24 +15,26 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @AllArgsConstructor
-@Entity(name = "Estoque")
+@Entity(name = "Relatorio")
 @Getter
 @NoArgsConstructor
 @Setter
-@Table(name = "Estoque")
-public class EstoqueModel {
+@Table(name = "Relatorios")
+public class RelatorioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idEstoque;
+    private int idRelatorio;
 
-    private int quantidadeProduto;
-    private Date dataEntrega;
-
-    @ManyToOne
-    @JoinColumn(name = "fonecedorID" , nullable = false)
-    private FornecedorModel fornecedor;
+    private double lucroEsperado;
+    private double lucroPorProduto;
+    private LocalDateTime dataHoraRelatorio;
 
     @ManyToOne
-    @JoinColumn(name = "produtoID" , nullable = false)
-    private ProdutoModel produto;
+    @JoinColumn(name = "EstoqueID" , nullable = false)
+    private EstoqueModel estoque;
+
+    @ManyToOne
+    @JoinColumn(name = "vendaID" , nullable = false)
+    private VendaModel venda;
+    
 }

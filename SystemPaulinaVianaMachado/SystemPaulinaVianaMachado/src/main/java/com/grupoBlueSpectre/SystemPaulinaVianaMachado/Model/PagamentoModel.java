@@ -10,12 +10,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Pagamento")
-@Table(name = "Pagamento")
-@Getter
-@Setter
 @AllArgsConstructor
+@Entity(name = "Pagamento")
+@Getter
 @NoArgsConstructor
+@Setter
+@Table(name = "Pagamentos")
 public class PagamentoModel {
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
