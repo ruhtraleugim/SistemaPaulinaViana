@@ -1,8 +1,8 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum;
 
 public enum TipoProduto {
-    ALIMENTOS,
-    BEBIDAS_ALCOOLICAS,
+    BEBIDAS_QUENTES,
+    CERVEJAS,
     BEBIDAS_NAO_ALCOOLICAS,
     CIGARROS,
     DOCES,

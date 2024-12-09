@@ -1,9 +1,11 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.StatusPagamento;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.TipoPagamento;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum.StatusPagamento;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum.TipoPagamento;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,7 +29,12 @@ public class PagamentoModel {
     private double valorPago;
     private String caminhoComprovante;
     private String recebedorPagamento;
-    private StatusPagamento statusPagamento;
+
+    @Enumerated(EnumType.STRING)
     private TipoPagamento formaPagamento;
+
+    @Enumerated(EnumType.STRING)
+    private StatusPagamento statusPagamento;
+
 
 }

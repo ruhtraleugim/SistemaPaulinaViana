@@ -1,6 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum.TipoProduto;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,7 +29,9 @@ public class FornecedorModel {
     private String fornecedorEndereco;
     private String fornecedorNome;
     private String fornecedorTelefone;
-    private String tipoProduto;
+    
+    @Enumerated(EnumType.STRING)
+    private TipoProduto tipoProduto;
 
 
 }

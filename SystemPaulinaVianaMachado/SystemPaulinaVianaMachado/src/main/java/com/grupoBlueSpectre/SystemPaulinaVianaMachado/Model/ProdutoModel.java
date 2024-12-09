@@ -2,9 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model;
 
 import java.util.Date;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Enum.TipoProduto;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum.TipoProduto;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,5 +30,7 @@ public class ProdutoModel {
     private String descricaoProduto;
     private String nomeProduto;
     private Date validadeProduto;
+
+    @Enumerated(EnumType.STRING)
     private TipoProduto tipoProduto;
 }
