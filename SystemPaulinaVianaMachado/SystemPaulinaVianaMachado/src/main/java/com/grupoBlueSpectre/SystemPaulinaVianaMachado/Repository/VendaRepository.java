@@ -3,8 +3,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.DebitosModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.VendaModel;
 
 @Repository
-public interface DebitosRepository extends JpaRepository<DebitosModel , Integer>{   
+public interface VendaRepository extends JpaRepository<VendaModel , Integer> {
 }
