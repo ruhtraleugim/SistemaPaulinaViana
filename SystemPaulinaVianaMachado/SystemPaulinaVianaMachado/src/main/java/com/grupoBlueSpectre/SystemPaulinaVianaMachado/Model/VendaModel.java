@@ -28,13 +28,14 @@ public class VendaModel {
 
     private int quantidadeProduto;
     private double valorVenda;
-    private LocalDateTime dataVenda;
 
+    private LocalDateTime dataVenda;
     @ManyToOne
-    @JoinColumn(name = "produtoID" , nullable = false)
+    @JoinColumn(name = "produtoID" )
     private ProdutoModel produtoVenda;
 
     @ManyToOne
-    @JoinColumn(name = "pagamentoID" , nullable = false)
+    @JoinColumn(name = "pagamentoID" )
     private PagamentoModel pagamento;
+
 }
