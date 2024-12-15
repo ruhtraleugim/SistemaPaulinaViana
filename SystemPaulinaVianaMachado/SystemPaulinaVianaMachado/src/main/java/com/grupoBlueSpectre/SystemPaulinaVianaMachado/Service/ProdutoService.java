@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.ProdutoModel;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.RelatorioModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Repository.ProdutoRepository;
 
 @Service

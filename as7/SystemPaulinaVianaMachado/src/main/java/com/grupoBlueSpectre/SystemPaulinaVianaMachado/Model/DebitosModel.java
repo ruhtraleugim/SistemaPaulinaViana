@@ -33,3 +33,4 @@ public class DebitosModel {
     @JoinColumn(name = "pagamentoID" , nullable = false)
     private PagamentoModel pagamento;
 }
+

@@ -6,12 +6,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.DebitosModel;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Repository.DebitoRepository;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Repository.DebitosRepository;
 
 @Service
 public class DebitoService {
     @Autowired
-    private DebitoRepository debitoRepository;
+    private DebitosRepository debitoRepository;
 
     public List<DebitosModel> getAllDebitos(){
         return debitoRepository.findAll();

@@ -4,11 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.expression.spel.ast.Indexer;
 import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.RelatorioModel;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.VendaModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Repository.RelatorioRepository;
 
 @Service
