@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.DebitosModel;
 
 @Repository
-public interface DebitosRepository extends JpaRepository<DebitosModel , Integer>{   
+public interface DebitoRepository extends JpaRepository<DebitosModel , Integer>{   
 }

@@ -18,12 +18,10 @@ public class VendaService {
     }
     public Optional<VendaModel> getVendasByID(Integer id){
         return vendaRepository.findById(id);
-    }   
-    
+    }
     public VendaModel newVenda(VendaModel venda){
         return vendaRepository.save(venda);
     }
-
     public void deleteVenda(Integer id){
         vendaRepository.deleteById(id);
     }
