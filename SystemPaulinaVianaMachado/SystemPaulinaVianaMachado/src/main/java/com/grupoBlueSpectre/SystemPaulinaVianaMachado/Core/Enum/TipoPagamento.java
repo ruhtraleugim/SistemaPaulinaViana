@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Model.Enum;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum;
 
 public enum TipoPagamento {
     CREDITO,
