@@ -14,6 +14,4 @@ public interface PagamentoGateway {
         PagamentoModel newPagamentoModel(PagamentoModel pagamento);
 
         PagamentoModel alterarPagamentoModel(int ID, PagamentoModel pagamento);
-
-
 }
