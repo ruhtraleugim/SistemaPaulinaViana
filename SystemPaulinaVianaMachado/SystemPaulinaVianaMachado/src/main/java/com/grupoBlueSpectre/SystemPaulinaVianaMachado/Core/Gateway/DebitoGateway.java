@@ -3,18 +3,15 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitosModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
 
 public interface DebitoGateway {
 
-        Optional<DebitosModel> getDebitosByID(int ID);
+        Optional<DebitoModel> getDebitosByID(int ID);
 
-        List<DebitosModel> GetDebitos();
+        List<DebitoModel> GetDebito();
 
         void deleteDebito(int ID);
 
-        DebitosModel newDebito(DebitosModel debito);
-        
-        
-
+        DebitoModel newDebito(DebitoModel debito);
 }

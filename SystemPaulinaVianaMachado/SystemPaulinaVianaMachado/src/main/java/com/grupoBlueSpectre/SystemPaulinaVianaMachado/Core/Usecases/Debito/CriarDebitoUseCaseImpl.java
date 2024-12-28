@@ -1,19 +1,17 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 
-import java.util.List;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
-public class BuscarDebitoUseCaseImpl implements BuscarUseCase<DebitoModel>{
-
+public class CriarDebitoUseCaseImpl implements CriarUseCase<DebitoModel>{
     private final DebitoGateway debitoGateway;
 
-    public BuscarDebitoUseCaseImpl(DebitoGateway debitoGateway){
+    public CriarDebitoUseCaseImpl(DebitoGateway debitoGateway){
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public List<DebitoModel> execute() {
-        return debitoGateway.GetDebito();
+    public DebitoModel execute(DebitoModel debitoModel) {
+        return debitoGateway.newDebito(debitoModel);
     }
 }

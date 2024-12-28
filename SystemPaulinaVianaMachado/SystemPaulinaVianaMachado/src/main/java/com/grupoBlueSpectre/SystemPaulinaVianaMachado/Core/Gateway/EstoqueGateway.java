@@ -11,6 +11,9 @@ public interface EstoqueGateway {
 
         List<EstoqueModel> getEstoques();
 
-        EstoqueModel criarEvento(EstoqueModel estoqueModel);
-     
+        void deletarEstoque(int ID);
+
+        EstoqueModel criarEstoque(EstoqueModel estoqueModel);
+
+        EstoqueModel alterarEstoque(EstoqueModel estoque, int ID);
 }

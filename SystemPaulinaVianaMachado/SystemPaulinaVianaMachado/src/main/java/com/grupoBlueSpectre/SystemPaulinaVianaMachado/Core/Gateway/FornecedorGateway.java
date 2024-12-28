@@ -7,7 +7,9 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.FornecedorMode
 
 public interface FornecedorGateway {
     
-        Optional<FornecedorModel> getFornecedorByID();
+        Optional<FornecedorModel> getFornecedorByID(int ID);
+
+        Optional<FornecedorModel> getForncedorByName(String nome);
 
         List<FornecedorModel> getFornecedores();
 

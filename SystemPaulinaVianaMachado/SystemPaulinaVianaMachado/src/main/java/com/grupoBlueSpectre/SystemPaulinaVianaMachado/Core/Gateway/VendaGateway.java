@@ -13,6 +13,8 @@ public interface VendaGateway {
         List<VendaModel> getVendasByDate(Date Data);
 
         List<VendaModel> getVendas();
+        
+        void deleteVenda(int id);
 
         VendaModel newVenda( VendaModel venda);
 
