@@ -6,12 +6,13 @@ import java.util.Optional;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
 
 public interface DebitoGateway {
+        
+        DebitoModel newDebito(DebitoModel debito);
+        
+        List<DebitoModel> GetDebito();
 
         Optional<DebitoModel> getDebitosByID(int ID);
 
-        List<DebitoModel> GetDebito();
-
         void deleteDebito(int ID);
 
-        DebitoModel newDebito(DebitoModel debito);
 }

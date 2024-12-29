@@ -5,6 +5,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGatewa
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
 public class AlterarEstoqueUseCaseImpl implements AlterarUserCase<EstoqueModel> {
+   
     private final EstoqueGateway estoqueGateway;
 
     public AlterarEstoqueUseCaseImpl(EstoqueGateway estoqueGateway){

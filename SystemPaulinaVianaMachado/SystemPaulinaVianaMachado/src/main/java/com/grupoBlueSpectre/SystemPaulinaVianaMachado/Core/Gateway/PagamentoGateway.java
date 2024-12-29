@@ -1,8 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.PagamentoModel;
 
 public interface PagamentoGateway {
@@ -11,7 +11,11 @@ public interface PagamentoGateway {
 
         List<PagamentoModel> getPagamentos();
 
+        List<PagamentoModel> getPagamentoByDate(Date date);
+
         PagamentoModel newPagamentoModel(PagamentoModel pagamento);
 
         PagamentoModel alterarPagamentoModel(int ID, PagamentoModel pagamento);
+
+        Void deletePagamento(int ID);
 }

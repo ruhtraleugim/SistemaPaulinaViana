@@ -5,9 +5,10 @@ import java.util.Date;
 public record EstoqueModel(int idEstoque,
                         int versaoEstoque,
                         int quantidadeProduto,
-                        Date dataEntrega,
+                        Date dataEstoque,
                         FornecedorModel fornecedor,
                         ProdutoModel produto) {}
 
     
     
+ 

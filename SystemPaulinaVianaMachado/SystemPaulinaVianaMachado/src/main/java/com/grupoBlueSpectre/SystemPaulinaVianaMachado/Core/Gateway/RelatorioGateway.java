@@ -16,4 +16,6 @@ public interface RelatorioGateway {
         RelatorioModel newRelatorio(RelatorioModel relatorio);
 
         RelatorioModel alterarRelatorio(int ID, RelatorioModel relatorio);
+
+        
 } 
