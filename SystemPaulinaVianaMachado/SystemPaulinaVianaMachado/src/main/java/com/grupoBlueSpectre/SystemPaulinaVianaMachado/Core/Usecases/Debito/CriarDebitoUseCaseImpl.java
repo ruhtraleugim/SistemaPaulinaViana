@@ -5,6 +5,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
 public class CriarDebitoUseCaseImpl implements CriarUseCase<DebitoModel>{
+    
     private final DebitoGateway debitoGateway;
 
     public CriarDebitoUseCaseImpl(DebitoGateway debitoGateway){

@@ -17,5 +17,7 @@ public interface ProdutoGateway {
 
         ProdutoModel newProduto(ProdutoModel produtoModel);
 
-        ProdutoModel alternarProduto(ProdutoModel produto, int ID);
+        ProdutoModel alterarProduto(ProdutoModel produto, int ID);
+
+        void deleteProduto(int ID);
 }

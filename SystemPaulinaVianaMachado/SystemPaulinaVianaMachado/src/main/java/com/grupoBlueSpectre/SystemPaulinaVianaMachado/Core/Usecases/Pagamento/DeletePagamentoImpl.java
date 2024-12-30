@@ -14,5 +14,4 @@ public class DeletePagamentoImpl implements DeleteUsecase{
     public void execute(int ID) {
         pagamentoGateway.deletePagamento(ID);
     }
-    
 }

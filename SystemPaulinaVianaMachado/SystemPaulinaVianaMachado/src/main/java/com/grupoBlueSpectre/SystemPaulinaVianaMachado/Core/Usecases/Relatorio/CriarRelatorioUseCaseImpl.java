@@ -1,18 +1,18 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio;
 
-import java.util.List;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.RelatorioModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
-public class BuscarRelatorioUseCaseImpl implements BuscarUseCase<RelatorioModel> {
+public class CriarRelatorioUseCaseImpl implements CriarUseCase<RelatorioModel> {
+
     private final RelatorioGateway relatorioGateway;
 
-    public BuscarRelatorioUseCaseImpl(RelatorioGateway relatorioGateway){
+    public CriarRelatorioUseCaseImpl(RelatorioGateway relatorioGateway){
         this.relatorioGateway = relatorioGateway;
     }
     @Override
-    public List<RelatorioModel> execute() {
-        return relatorioGateway.getRelatorio() ;
+    public RelatorioModel execute(RelatorioModel relatorio) {
+        return relatorioGateway.newRelatorio(relatorio);
     }
 }

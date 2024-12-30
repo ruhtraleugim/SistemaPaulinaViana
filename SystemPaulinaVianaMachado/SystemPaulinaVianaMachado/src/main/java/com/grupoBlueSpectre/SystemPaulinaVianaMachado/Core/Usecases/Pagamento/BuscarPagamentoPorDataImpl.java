@@ -4,9 +4,9 @@ import java.util.Date;
 import java.util.List;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.PagamentoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPagamentosPorDataUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarPagamentoPorDataImpl implements BuscarPagamentosPorDataUseCase<PagamentoModel> {
+public class BuscarPagamentoPorDataImpl implements BuscarPorDataUseCase<PagamentoModel> {
 
     private final PagamentoGateway pagamentoGateway;
 
@@ -17,5 +17,4 @@ public class BuscarPagamentoPorDataImpl implements BuscarPagamentosPorDataUseCas
     public List<PagamentoModel> execute(Date date) {
         return pagamentoGateway.getPagamentoByDate(date);
     }
-    
 }

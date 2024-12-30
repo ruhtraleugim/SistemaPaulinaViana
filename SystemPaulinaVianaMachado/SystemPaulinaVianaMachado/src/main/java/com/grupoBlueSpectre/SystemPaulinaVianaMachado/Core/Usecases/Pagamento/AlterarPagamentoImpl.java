@@ -15,5 +15,4 @@ public class AlterarPagamentoImpl implements AlterarUserCase<PagamentoModel>{
     public PagamentoModel execute(int ID, PagamentoModel altPagamento) {
         return pagamentoGateway.alterarPagamentoModel(ID, altPagamento);
     }
-    
 }

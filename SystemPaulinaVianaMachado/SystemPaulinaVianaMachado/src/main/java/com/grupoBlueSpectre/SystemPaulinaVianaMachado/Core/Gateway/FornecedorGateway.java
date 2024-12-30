@@ -2,7 +2,6 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.FornecedorModel;
 
 public interface FornecedorGateway {

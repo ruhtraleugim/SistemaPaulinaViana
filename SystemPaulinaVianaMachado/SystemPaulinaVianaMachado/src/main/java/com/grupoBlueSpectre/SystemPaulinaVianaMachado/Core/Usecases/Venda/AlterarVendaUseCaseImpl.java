@@ -1,19 +1,19 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda;
 
-import java.util.List;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.VendaModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
-public class BuscarVendaUseCaseImpl implements BuscarUseCase<VendaModel>{
+public class AlterarVendaUseCaseImpl implements AlterarUserCase<VendaModel>{
     
     private final VendaGateway vendaGateway;
 
-    public BuscarVendaUseCaseImpl(VendaGateway vendaGateway){
+    public AlterarVendaUseCaseImpl(VendaGateway vendaGateway){
         this.vendaGateway = vendaGateway;
     }
+
     @Override
-    public List<VendaModel> execute() {
-        return vendaGateway.getVendas();
+    public VendaModel execute(int ID, VendaModel venda) {
+        return vendaGateway.alterarVenda(venda, ID);
     }
 }

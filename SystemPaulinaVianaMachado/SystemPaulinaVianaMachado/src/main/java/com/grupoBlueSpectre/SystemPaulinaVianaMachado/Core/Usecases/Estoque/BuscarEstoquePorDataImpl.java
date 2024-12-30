@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.EstoqueModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPagamentosPorDataUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarEstoquePorDataImpl implements BuscarPagamentosPorDataUseCase<EstoqueModel> {
+public class BuscarEstoquePorDataImpl implements BuscarPorDataUseCase<EstoqueModel> {
 
     private final EstoqueGateway estoqueGateway;
 
