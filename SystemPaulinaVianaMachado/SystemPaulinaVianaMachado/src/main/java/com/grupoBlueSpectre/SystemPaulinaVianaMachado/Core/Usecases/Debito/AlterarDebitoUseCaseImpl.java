@@ -5,6 +5,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
 public class AlterarDebitoUseCaseImpl implements AlterarUserCase<DebitoModel> {
+    
     private final DebitoGateway debitoGateway;
 
     public AlterarDebitoUseCaseImpl(DebitoGateway debitoGateway){
