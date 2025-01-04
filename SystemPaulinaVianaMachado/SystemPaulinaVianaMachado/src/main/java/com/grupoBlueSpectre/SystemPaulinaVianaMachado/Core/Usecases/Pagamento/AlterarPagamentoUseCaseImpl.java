@@ -4,11 +4,11 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.PagamentoModel
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
-public class AlterarPagamentoImpl implements AlterarUserCase<PagamentoModel>{
+public class AlterarPagamentoUseCaseImpl implements AlterarUserCase<PagamentoModel>{
 
     private final PagamentoGateway pagamentoGateway;
 
-    public AlterarPagamentoImpl(PagamentoGateway pagamentoGateway){
+    public AlterarPagamentoUseCaseImpl(PagamentoGateway pagamentoGateway){
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override

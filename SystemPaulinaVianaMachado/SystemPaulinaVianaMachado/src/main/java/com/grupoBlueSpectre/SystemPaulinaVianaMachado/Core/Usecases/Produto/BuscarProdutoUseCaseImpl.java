@@ -5,11 +5,11 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.ProdutoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
 
-public class BuscarProtutoUseCaseImpl implements BuscarUseCase<ProdutoModel> {
+public class BuscarProdutoUseCaseImpl implements BuscarUseCase<ProdutoModel> {
     
     private ProdutoGateway produtoGateway;
 
-    public BuscarProtutoUseCaseImpl(ProdutoGateway produtoGateway){
+    public BuscarProdutoUseCaseImpl(ProdutoGateway produtoGateway){
         this.produtoGateway = produtoGateway;
     }
     @Override

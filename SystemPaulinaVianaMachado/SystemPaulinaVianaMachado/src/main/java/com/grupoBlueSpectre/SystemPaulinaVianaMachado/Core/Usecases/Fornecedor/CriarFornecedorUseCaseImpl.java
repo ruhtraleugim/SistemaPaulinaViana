@@ -4,11 +4,11 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.FornecedorMode
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.FornecedorGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
-public class CriarFornecedorImpl implements CriarUseCase<FornecedorModel>{
+public class CriarFornecedorUseCaseImpl implements CriarUseCase<FornecedorModel>{
 
     private final FornecedorGateway fornecedorGateway;
 
-    public CriarFornecedorImpl(FornecedorGateway fornecedorGateway){
+    public CriarFornecedorUseCaseImpl(FornecedorGateway fornecedorGateway){
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override

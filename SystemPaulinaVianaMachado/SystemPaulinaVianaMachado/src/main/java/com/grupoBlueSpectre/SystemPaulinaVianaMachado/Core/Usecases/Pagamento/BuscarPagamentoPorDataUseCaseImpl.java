@@ -6,11 +6,11 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.PagamentoModel
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarPagamentoPorDataImpl implements BuscarPorDataUseCase<PagamentoModel> {
+public class BuscarPagamentoPorDataUseCaseImpl implements BuscarPorDataUseCase<PagamentoModel> {
 
     private final PagamentoGateway pagamentoGateway;
 
-    public BuscarPagamentoPorDataImpl(PagamentoGateway pagamentoGateway){
+    public BuscarPagamentoPorDataUseCaseImpl(PagamentoGateway pagamentoGateway){
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override

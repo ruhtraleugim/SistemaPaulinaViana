@@ -1,0 +1,43 @@
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.RelatorioModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorIDUserCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.DeleteUsecase;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Pagamento.BuscarPagamentoPorDataUseCaseImpl;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.AlterarRelatorioUseCaseImpl;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.BuscarRelatorioPorDataUseCaseImpl;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.BuscarRelatorioUseCaseImpl;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.CriarRelatorioUseCaseImpl;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.DeleteRelatorioUseCaseImpl;
+
+@Configuration
+public class BeanRelatorioGatewayConfig {
+    @Bean
+    public AlterarUserCase<RelatorioModel> alterarRelatorio(RelatorioGateway relatorioGateway){
+        return new AlterarRelatorioUseCaseImpl(relatorioGateway);
+    }
+    @Bean
+    public BuscarPorDataUseCase<RelatorioModel> buscarRelatorioPorData(RelatorioGateway relatorioGateway){
+        return new BuscarRelatorioPorDataUseCaseImpl(relatorioGateway);
+    }
+    @Bean
+    public BuscarUseCase<RelatorioModel> buscarPagamento(RelatorioGateway relatorioGateway){
+        return new BuscarRelatorioUseCaseImpl(relatorioGateway);
+    }
+    @Bean
+    public CriarUseCase<RelatorioModel> criarRelatorio(RelatorioGateway relatorioGateway) {
+        return new CriarRelatorioUseCaseImpl(relatorioGateway);
+    }
+    @Bean
+    public  DeleteUsecase deleteRelatorio(RelatorioGateway relatorioGateway){
+        return new DeleteRelatorioUseCaseImpl(relatorioGateway);
+    }
+}
