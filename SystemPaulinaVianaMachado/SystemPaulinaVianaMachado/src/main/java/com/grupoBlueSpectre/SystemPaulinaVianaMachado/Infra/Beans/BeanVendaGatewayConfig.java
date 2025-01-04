@@ -20,32 +20,26 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda.Delete
 
 @Configuration
 public class BeanVendaGatewayConfig {
-    
     @Bean
     public AlterarUserCase<VendaModel> alterarVenda(VendaGateway vendaGateway) {
         return new AlterarVendaUseCaseImpl(vendaGateway);
     }
-
     @Bean
     public BuscarPorDataUseCase<VendaModel> buscarVendaPorDia(VendaGateway vendaGateway) {
         return new BuscarVendaPorDiaUseCaseImpl(vendaGateway);
     }
-
     @Bean
     public BuscarPorIDUserCase<VendaModel> buscarVendaPorID(VendaGateway vendaGateway) {
         return new BuscarVendaPorIDUseCaseImpl(vendaGateway);
     }
-
     @Bean
     public BuscarUseCase<VendaModel> buscarVenda(VendaGateway vendaGateway) {
         return new BuscarVendaUseCaseImpl(vendaGateway);
     }
-
     @Bean
     public CriarUseCase<VendaModel> criarVenda(VendaGateway vendaGateway) {
         return new CriarVendaUseCaseImpl(vendaGateway);
     }
-
     @Bean
     public DeleteUsecase deleteVenda(VendaGateway vendaGateway) {
         return new DeleteVendaUseCaseImpl(vendaGateway);
