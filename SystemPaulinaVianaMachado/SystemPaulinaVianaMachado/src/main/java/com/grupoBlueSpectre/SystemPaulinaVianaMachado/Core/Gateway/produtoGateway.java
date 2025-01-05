@@ -3,7 +3,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.ProdutoModel;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoModel;
 
 public interface ProdutoGateway {
 

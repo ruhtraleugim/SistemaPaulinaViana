@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
 public record DebitoModel(int idDebitos,
                            double valorCobrado,

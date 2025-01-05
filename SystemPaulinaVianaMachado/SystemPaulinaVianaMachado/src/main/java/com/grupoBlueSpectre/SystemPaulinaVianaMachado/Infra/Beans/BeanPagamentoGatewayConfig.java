@@ -1,8 +1,7 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito.BuscarDebitoPorIDUseCaseImpl;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.*;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Pagamento.*;
 import org.springframework.context.annotation.Bean;

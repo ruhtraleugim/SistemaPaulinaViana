@@ -1,7 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio;
 
 import java.util.List;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.RelatorioModel;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
 

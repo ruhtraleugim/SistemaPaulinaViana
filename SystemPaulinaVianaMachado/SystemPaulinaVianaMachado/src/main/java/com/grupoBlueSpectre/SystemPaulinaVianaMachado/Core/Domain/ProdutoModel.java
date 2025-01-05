@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
 import java.util.Date;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.TipoProduto;

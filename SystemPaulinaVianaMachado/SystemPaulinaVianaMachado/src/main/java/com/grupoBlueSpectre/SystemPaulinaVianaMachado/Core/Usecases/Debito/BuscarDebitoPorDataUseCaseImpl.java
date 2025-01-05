@@ -2,7 +2,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 
 import java.util.Date;
 import java.util.List;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 

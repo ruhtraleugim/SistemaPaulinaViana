@@ -3,7 +3,7 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.VendaModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;

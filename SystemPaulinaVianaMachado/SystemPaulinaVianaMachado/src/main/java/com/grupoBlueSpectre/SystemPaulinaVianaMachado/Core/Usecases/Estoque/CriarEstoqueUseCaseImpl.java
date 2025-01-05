@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Estoque;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.EstoqueModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 

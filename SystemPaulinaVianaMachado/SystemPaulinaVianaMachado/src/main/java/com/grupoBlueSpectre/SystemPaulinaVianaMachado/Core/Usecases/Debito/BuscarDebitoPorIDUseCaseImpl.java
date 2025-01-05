@@ -1,7 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 
 import java.util.Optional;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorIDUserCase;
 

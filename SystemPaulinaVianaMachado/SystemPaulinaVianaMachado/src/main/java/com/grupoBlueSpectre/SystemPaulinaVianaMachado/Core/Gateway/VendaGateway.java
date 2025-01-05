@@ -3,7 +3,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.VendaModel;
+
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
 
 public interface VendaGateway {
     

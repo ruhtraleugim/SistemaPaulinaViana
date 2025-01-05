@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.DebitoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito.*;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.*;

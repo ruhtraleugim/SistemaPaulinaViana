@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Produto;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Entity.ProdutoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoModel;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
