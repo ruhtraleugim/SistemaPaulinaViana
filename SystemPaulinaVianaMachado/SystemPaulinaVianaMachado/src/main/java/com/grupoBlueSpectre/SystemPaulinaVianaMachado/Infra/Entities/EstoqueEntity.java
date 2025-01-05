@@ -3,7 +3,17 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
 import java.util.Date;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Entity(name = "ESTOQUE")
 @Table(name = "ESTOQUE")
 public class EstoqueEntity {
@@ -15,10 +25,9 @@ public class EstoqueEntity {
     private int quantidadeProduto;
     private Date dataEstoque;
     @ManyToOne
-    @JoinColumn(name = "fornecedor_id")
+    @JoinColumn(name = "idFornecedor")
     private FornecedorEntity fornecedor;
     @ManyToOne
-    @JoinColumn(name = "produto_id")
+    @JoinColumn(name = "idProduto")
     private ProdutoEntity produto;
-
 }

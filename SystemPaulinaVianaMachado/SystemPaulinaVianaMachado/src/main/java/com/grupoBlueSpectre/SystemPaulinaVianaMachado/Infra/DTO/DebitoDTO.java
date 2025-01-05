@@ -1,9 +1,12 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.DTO;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-public record DebitoDTO(Long id,
-                        BigDecimal valor,
-                        LocalDateTime dataDebito,
-                        String descricao) {}
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+
+
+public record DebitoDTO(Long idDebito,
+                        double valorDebito,
+                        String cobrador,
+                        String descricaoConta,
+                        String tipoConta,
+                        PagamentoModel pagamento) {}

@@ -1,7 +1,7 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
-public record DebitoModel(int idDebitos,
-                           double valorCobrado,
+public record DebitoModel(Long idDebito,
+                           double valorDebito,
                            String cobrador,
                            String descricaoConta,
                            String tipoConta,

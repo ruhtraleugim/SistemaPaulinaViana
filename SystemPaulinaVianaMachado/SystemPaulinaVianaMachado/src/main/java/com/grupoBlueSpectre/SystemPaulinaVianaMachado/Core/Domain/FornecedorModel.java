@@ -7,4 +7,5 @@ public record FornecedorModel(int idFornecedor,
                              String fornecedorEndereco,
                              String fornecedorNome,
                              String fornecedorTelefone,
+                             String fornecedorEmail,
                              TipoProduto tipoProduto) {} 

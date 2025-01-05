@@ -6,7 +6,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.TipoPagamento;
 
 public record PagamentoModel(int idPagamento,
                             double valorPago,
-                            String caminhoComprovante,
+                            String cpfCobrador,
                             String recebedorPagamento,
                             Date dataPagamento,
                             TipoPagamento formaPagamento,

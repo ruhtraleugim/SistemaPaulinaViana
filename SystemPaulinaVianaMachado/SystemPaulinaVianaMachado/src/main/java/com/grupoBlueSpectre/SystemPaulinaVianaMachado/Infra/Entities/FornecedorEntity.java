@@ -1,8 +1,17 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
 
 import jakarta.persistence.*;
-import javax.persistence.GenerationType;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 @Entity(name = "FORNECEDOR")
 @Table(name = "FORNECEDOR")
 public class FornecedorEntity {
@@ -14,6 +23,8 @@ public class FornecedorEntity {
     private String fornecedorEndereco;
     private String fornecedorNome;
     private String fornecedorTelefone;
-    private String tipoProduto;
-    
+    private String fornecedorEmail;
+    @ManyToMany()
+    @JoinColumn(name = "idProduto")
+    private ProdutoEntity produto;;
 }
