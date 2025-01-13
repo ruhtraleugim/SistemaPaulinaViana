@@ -3,11 +3,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio;
 import java.util.Date;
 import java.util.List;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarRelatorioPorDataUseCaseImpl implements BuscarPorDataUseCase<RelatorioModel>{
+public class BuscarRelatorioPorDataUseCaseImpl implements BuscarPorDataUseCase<RelatorioDomain>{
 
     private final RelatorioGateway relatorioGateway;
 
@@ -15,7 +15,7 @@ public class BuscarRelatorioPorDataUseCaseImpl implements BuscarPorDataUseCase<R
         this.relatorioGateway = relatorioGateway;
     }
     @Override
-    public List<RelatorioModel> execute(Date date) {
+    public List<RelatorioDomain> execute(Date date) {
         return relatorioGateway.getRelatorioByDate(date);
     } 
 }

@@ -4,19 +4,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 
 public interface PagamentoGateway {
        
-        Optional<PagamentoModel> getPagamentoByID(int ID);
+        Optional<PagamentoDomain> getPagamentoByID(int ID);
 
-        List<PagamentoModel> getPagamentos();
+        List<PagamentoDomain> getPagamentos();
 
-        List<PagamentoModel> getPagamentoByDate(Date date);
+        List<PagamentoDomain> getPagamentoByDate(Date date);
 
-        PagamentoModel newPagamentoModel(PagamentoModel pagamento);
+        PagamentoDomain newPagamentoModel(PagamentoDomain pagamento);
 
-        PagamentoModel alterarPagamentoModel(int ID, PagamentoModel pagamento);
+        PagamentoDomain alterarPagamentoModel(int ID, PagamentoDomain pagamento);
 
         Void deletePagamento(int ID);
 }

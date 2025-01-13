@@ -4,19 +4,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 
 public interface VendaGateway {
     
-        Optional<VendaModel> getVendaByID(int id); 
+        Optional<VendaDomain> getVendaByID(int id); 
         
-        List<VendaModel> getVendasByDate(Date Data);
+        List<VendaDomain> getVendasByDate(Date Data);
 
-        List<VendaModel> getVendas();
+        List<VendaDomain> getVendas();
         
         void deleteVenda(int id);
 
-        VendaModel newVenda( VendaModel venda);
+        VendaDomain newVenda( VendaDomain venda);
 
-        VendaModel alterarVenda(VendaModel venda, int ID);
+        VendaDomain alterarVenda(VendaDomain venda, int ID);
 }

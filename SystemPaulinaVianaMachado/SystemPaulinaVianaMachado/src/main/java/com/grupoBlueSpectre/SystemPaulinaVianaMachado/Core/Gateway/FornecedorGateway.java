@@ -3,19 +3,19 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 
 public interface FornecedorGateway {
     
-        Optional<FornecedorModel> getFornecedorByID(int ID);
+        Optional<FornecedorDomain> getFornecedorByID(int ID);
 
-        Optional<FornecedorModel> getForncedorByName(String nome);
+        Optional<FornecedorDomain> getForncedorByName(String nome);
 
-        List<FornecedorModel> getFornecedores();
+        List<FornecedorDomain> getFornecedores();
 
-        FornecedorModel newFornecedor(FornecedorModel fornecedor);
+        FornecedorDomain newFornecedor(FornecedorDomain fornecedor);
 
         Void deleteFornecedor(int ID);
         
-        FornecedorModel alterarFornecedor(int ID, FornecedorModel fornecedor);
+        FornecedorDomain alterarFornecedor(int ID, FornecedorDomain fornecedor);
 }

@@ -2,9 +2,9 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
 import java.util.Date;
 
-public record EstoqueModel(int idEstoque,
+public record EstoqueDomain(int idEstoque,
                         int versaoEstoque,
                         int quantidadeProduto,
                         Date dataEstoque,
-                        FornecedorModel fornecedor,
-                        ProdutoModel produto) {} 
+                        FornecedorDomain fornecedor,
+                        ProdutoDomain produto) {} 

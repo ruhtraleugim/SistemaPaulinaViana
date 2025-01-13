@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
-public class AlterarVendaUseCaseImpl implements AlterarUserCase<VendaModel>{
+public class AlterarVendaUseCaseImpl implements AlterarUserCase<VendaDomain>{
     
     private final VendaGateway vendaGateway;
 
@@ -13,7 +13,7 @@ public class AlterarVendaUseCaseImpl implements AlterarUserCase<VendaModel>{
     }
 
     @Override
-    public VendaModel execute(int ID, VendaModel venda) {
+    public VendaDomain execute(int ID, VendaDomain venda) {
         return vendaGateway.alterarVenda(venda, ID);
     }
 }

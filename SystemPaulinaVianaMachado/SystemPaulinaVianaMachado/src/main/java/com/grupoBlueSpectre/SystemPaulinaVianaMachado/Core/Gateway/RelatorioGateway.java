@@ -4,20 +4,20 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
 
 
 public interface RelatorioGateway {
 
-        Optional<RelatorioModel> getRelatorioByID(int ID);
+        Optional<RelatorioDomain> getRelatorioByID(int ID);
 
-        List<RelatorioModel> getRelatorio();
+        List<RelatorioDomain> getRelatorio();
 
-        List<RelatorioModel> getRelatorioByDate(Date date);
+        List<RelatorioDomain> getRelatorioByDate(Date date);
 
         void deleteRelatorio(int ID);
 
-        RelatorioModel newRelatorio(RelatorioModel relatorio);
+        RelatorioDomain newRelatorio(RelatorioDomain relatorio);
 
-        RelatorioModel alterarRelatorio(int ID, RelatorioModel relatorio);
+        RelatorioDomain alterarRelatorio(int ID, RelatorioDomain relatorio);
 } 

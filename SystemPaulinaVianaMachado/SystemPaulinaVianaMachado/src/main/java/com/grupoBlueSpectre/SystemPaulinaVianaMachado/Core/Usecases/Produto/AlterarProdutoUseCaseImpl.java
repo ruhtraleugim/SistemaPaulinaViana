@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Produto;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
-public class AlterarProdutoUseCaseImpl implements AlterarUserCase<ProdutoModel> {
+public class AlterarProdutoUseCaseImpl implements AlterarUserCase<ProdutoDomain> {
 
     private final ProdutoGateway produtoGateway;
 
@@ -12,7 +12,7 @@ public class AlterarProdutoUseCaseImpl implements AlterarUserCase<ProdutoModel> 
         this.produtoGateway = produtoGateway;
     }
     @Override
-    public ProdutoModel execute(int ID, ProdutoModel newProduto) {
+    public ProdutoDomain execute(int ID, ProdutoDomain newProduto) {
        return produtoGateway.alterarProduto(newProduto, ID);
     }
 }

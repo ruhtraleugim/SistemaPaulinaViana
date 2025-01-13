@@ -4,19 +4,19 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 
 public interface EstoqueGateway {
     
-        Optional<EstoqueModel> getEstoqueByID(int ID);
+        Optional<EstoqueDomain> getEstoqueByID(int ID);
 
-        List<EstoqueModel> getEstoques();
+        List<EstoqueDomain> getEstoques();
 
-        List<EstoqueModel> getEstoqueByDate(Date date);
+        List<EstoqueDomain> getEstoqueByDate(Date date);
 
         void deletarEstoque(int ID);
 
-        EstoqueModel criarEstoque(EstoqueModel estoqueModel);
+        EstoqueDomain criarEstoque(EstoqueDomain estoqueModel);
 
-        EstoqueModel alterarEstoque(EstoqueModel estoque, int ID);
+        EstoqueDomain alterarEstoque(EstoqueDomain estoque, int ID);
 }

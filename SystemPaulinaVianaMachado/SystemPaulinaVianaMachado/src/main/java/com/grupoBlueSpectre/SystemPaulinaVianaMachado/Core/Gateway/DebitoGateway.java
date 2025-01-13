@@ -4,17 +4,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 
 public interface DebitoGateway {
         
-        DebitoModel newDebito(DebitoModel debito);
+        DebitoDomain newDebito(DebitoDomain debito);
         
-        List<DebitoModel> GetDebito();
+        List<DebitoDomain> GetDebito();
 
-        Optional<DebitoModel> getDebitosByID(int ID);
+        Optional<DebitoDomain> getDebitosByID(int ID);
 
-        List<DebitoModel> getDebitosByDate(Date date);
+        List<DebitoDomain> getDebitosByDate(Date date);
 
         void deleteDebito(int ID);
 }

@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.*;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Pagamento.*;
@@ -10,23 +10,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanPagamentoGatewayConfig {
     @Bean
-    public AlterarUserCase<PagamentoModel> alterarPagamento(PagamentoGateway pagamentoGateway){
+    public AlterarUserCase<PagamentoDomain> alterarPagamento(PagamentoGateway pagamentoGateway){
         return new AlterarPagamentoUseCaseImpl(pagamentoGateway);
     }
     @Bean
-    public BuscarPorDataUseCase<PagamentoModel> buscarPagamentoPorData(PagamentoGateway pagamentoGateway){
+    public BuscarPorDataUseCase<PagamentoDomain> buscarPagamentoPorData(PagamentoGateway pagamentoGateway){
         return new BuscarPagamentoPorDataUseCaseImpl(pagamentoGateway);
     }
     @Bean
-    public BuscarUseCase<PagamentoModel> buscarPagamento(PagamentoGateway pagamentoGateway){
+    public BuscarUseCase<PagamentoDomain> buscarPagamento(PagamentoGateway pagamentoGateway){
         return new BuscarPagamentoUseCaseImpl(pagamentoGateway);
     }
     @Bean
-    public BuscarPorIDUserCase<PagamentoModel> buscarPagamentoPorID(PagamentoGateway pagamentoGateway){
+    public BuscarPorIDUserCase<PagamentoDomain> buscarPagamentoPorID(PagamentoGateway pagamentoGateway){
         return new BuscarPagamentoPorIDUseCaseImpl(pagamentoGateway);
     }
     @Bean
-    public CriarUseCase<PagamentoModel> CriarPagamento(PagamentoGateway pagamentoGateway){
+    public CriarUseCase<PagamentoDomain> CriarPagamento(PagamentoGateway pagamentoGateway){
         return new CriarPagamentoUseCaseImpl(pagamentoGateway);
     }
     @Bean

@@ -2,11 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Fornecedor;
 
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.FornecedorGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorIDUserCase;
 
-public class BuscarFonecedorPoIDUseCaseImpl implements BuscarPorIDUserCase<FornecedorModel>{
+public class BuscarFonecedorPoIDUseCaseImpl implements BuscarPorIDUserCase<FornecedorDomain>{
 
     private final FornecedorGateway fornecedorGateway;
 
@@ -14,7 +14,7 @@ public class BuscarFonecedorPoIDUseCaseImpl implements BuscarPorIDUserCase<Forne
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override
-    public Optional<FornecedorModel> execute(int ID) {
+    public Optional<FornecedorDomain> execute(int ID) {
         return fornecedorGateway.getFornecedorByID(ID);
     }
 } 

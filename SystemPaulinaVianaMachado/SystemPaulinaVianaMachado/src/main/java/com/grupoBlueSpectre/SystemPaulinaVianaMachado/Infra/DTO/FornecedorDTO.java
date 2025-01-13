@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.DTO;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto;
 
 public record FornecedorDTO(Long id,
                             String nome,

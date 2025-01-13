@@ -2,9 +2,9 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
 import java.time.LocalDateTime;
 
-public record VendaModel(int idVenda,
+public record VendaDomain(int idVenda,
                         int quantidadeProduto,
                         double valorVenda,
                         LocalDateTime dataVenda,
-                        ProdutoModel produtoVenda,
-                        PagamentoModel pagamento){}
+                        ProdutoDomain produtoVenda,
+                        PagamentoDomain pagamento){}

@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.DTO;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.StatusPagamento;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.TipoPagamento;

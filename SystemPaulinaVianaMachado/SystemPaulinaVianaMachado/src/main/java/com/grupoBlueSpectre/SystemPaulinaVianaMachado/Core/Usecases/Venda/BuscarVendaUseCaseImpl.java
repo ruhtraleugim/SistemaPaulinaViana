@@ -2,11 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda;
 
 import java.util.List;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
 
-public class BuscarVendaUseCaseImpl implements BuscarUseCase<VendaModel>{
+public class BuscarVendaUseCaseImpl implements BuscarUseCase<VendaDomain>{
     
     private final VendaGateway vendaGateway;
 
@@ -14,7 +14,7 @@ public class BuscarVendaUseCaseImpl implements BuscarUseCase<VendaModel>{
         this.vendaGateway = vendaGateway;
     }
     @Override
-    public List<VendaModel> execute() {
+    public List<VendaDomain> execute() {
         return vendaGateway.getVendas();
     }
 }

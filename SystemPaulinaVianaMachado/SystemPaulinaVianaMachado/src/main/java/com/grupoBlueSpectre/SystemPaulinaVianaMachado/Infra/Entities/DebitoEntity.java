@@ -1,7 +1,7 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
     
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 
 import jakarta.persistence.*;
 
@@ -19,7 +19,7 @@ public class DebitoEntity {
 
     @ManyToOne
     @JoinColumn(name = "idPagamento")
-    private PagamentoModel pagamento;
+    private PagamentoDomain pagamento;
 
     public Long getId() {
         return id;
@@ -61,16 +61,16 @@ public class DebitoEntity {
         this.tipoConta = tipoConta;
     }
 
-    public PagamentoModel getPagamento() {
+    public PagamentoDomain getPagamento() {
         return pagamento;
     }
 
-    public void setPagamento(PagamentoModel pagamento) {
+    public void setPagamento(PagamentoDomain pagamento) {
         this.pagamento = pagamento;
     }
 
     public DebitoEntity(Long id, double valorDebito, String cpfCobrador, String descricaoConta, String tipoConta,
-            PagamentoModel pagamento) {
+            PagamentoDomain pagamento) {
         this.id = id;
         this.valorDebito = valorDebito;
         this.cpfCobrador = cpfCobrador;

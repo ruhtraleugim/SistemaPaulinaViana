@@ -3,11 +3,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Estoque;
 import java.util.Date;
 import java.util.List;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarEstoquePorDataUseCaseImpl implements BuscarPorDataUseCase<EstoqueModel> {
+public class BuscarEstoquePorDataUseCaseImpl implements BuscarPorDataUseCase<EstoqueDomain> {
 
     private final EstoqueGateway estoqueGateway;
 
@@ -15,7 +15,7 @@ public class BuscarEstoquePorDataUseCaseImpl implements BuscarPorDataUseCase<Est
         this.estoqueGateway = estoqueGateway;
     }
     @Override
-    public List<EstoqueModel> execute(Date date) {
+    public List<EstoqueDomain> execute(Date date) {
         return estoqueGateway.getEstoqueByDate(date);
     }  
 }

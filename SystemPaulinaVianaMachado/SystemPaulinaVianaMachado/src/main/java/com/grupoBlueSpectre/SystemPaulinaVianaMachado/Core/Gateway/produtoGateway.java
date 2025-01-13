@@ -4,21 +4,21 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 
 public interface ProdutoGateway {
 
-        Optional<ProdutoModel> getProdutoByID(int ID);
+        Optional<ProdutoDomain> getProdutoByID(int ID);
 
-        Optional<ProdutoModel> getProdutoByNome(String nomeProduto);
+        Optional<ProdutoDomain> getProdutoByNome(String nomeProduto);
 
-        List<ProdutoModel> getProdutoByDate(Date date);
+        List<ProdutoDomain> getProdutoByDate(Date date);
 
-        List<ProdutoModel> getProduto();
+        List<ProdutoDomain> getProduto();
 
-        ProdutoModel newProduto(ProdutoModel produtoModel);
+        ProdutoDomain newProduto(ProdutoDomain produtoModel);
 
-        ProdutoModel alterarProduto(ProdutoModel produto, int ID);
+        ProdutoDomain alterarProduto(ProdutoDomain produto, int ID);
 
         void deleteProduto(int ID);
 }

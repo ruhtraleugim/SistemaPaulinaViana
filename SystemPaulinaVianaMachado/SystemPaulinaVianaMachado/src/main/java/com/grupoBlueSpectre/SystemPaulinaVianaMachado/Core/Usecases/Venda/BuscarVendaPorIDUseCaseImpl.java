@@ -2,11 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda;
 
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorIDUserCase;
 
-public class BuscarVendaPorIDUseCaseImpl implements BuscarPorIDUserCase<VendaModel>{
+public class BuscarVendaPorIDUseCaseImpl implements BuscarPorIDUserCase<VendaDomain>{
 
     private final VendaGateway vendaGateway;
 
@@ -14,7 +14,7 @@ public class BuscarVendaPorIDUseCaseImpl implements BuscarPorIDUserCase<VendaMod
         this.vendaGateway = vendaGateway;
     }
     @Override
-    public Optional<VendaModel> execute(int ID) {
+    public Optional<VendaDomain> execute(int ID) {
         return vendaGateway.getVendaByID(ID);
     }
 }

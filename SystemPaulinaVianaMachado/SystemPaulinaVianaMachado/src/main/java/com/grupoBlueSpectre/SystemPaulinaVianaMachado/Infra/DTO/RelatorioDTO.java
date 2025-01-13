@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.DTO;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

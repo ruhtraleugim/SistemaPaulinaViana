@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Fornecedor;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.FornecedorGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
-public class CriarFornecedorUseCaseImpl implements CriarUseCase<FornecedorModel>{
+public class CriarFornecedorUseCaseImpl implements CriarUseCase<FornecedorDomain>{
 
     private final FornecedorGateway fornecedorGateway;
 
@@ -12,7 +12,7 @@ public class CriarFornecedorUseCaseImpl implements CriarUseCase<FornecedorModel>
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override
-    public FornecedorModel execute(FornecedorModel fornecedor) {
+    public FornecedorDomain execute(FornecedorDomain fornecedor) {
         return fornecedorGateway.newFornecedor(fornecedor);
     }
 }

@@ -1,7 +1,7 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.DTO;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto;
 
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 
 
 public record DebitoDTO(Long idDebito,
@@ -9,4 +9,4 @@ public record DebitoDTO(Long idDebito,
                         String cobrador,
                         String descricaoConta,
                         String tipoConta,
-                        PagamentoModel pagamento) {}
+                        PagamentoDomain pagamento) {}

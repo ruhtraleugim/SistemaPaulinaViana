@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.CriarUseCase;
 
-public class CriarDebitoUseCaseImpl implements CriarUseCase<DebitoModel>{
+public class CriarDebitoUseCaseImpl implements CriarUseCase<DebitoDomain>{
     
     private final DebitoGateway debitoGateway;
 
@@ -12,7 +12,7 @@ public class CriarDebitoUseCaseImpl implements CriarUseCase<DebitoModel>{
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public DebitoModel execute(DebitoModel debitoModel) {
+    public DebitoDomain execute(DebitoDomain debitoModel) {
         return debitoGateway.newDebito(debitoModel);
     }
 }

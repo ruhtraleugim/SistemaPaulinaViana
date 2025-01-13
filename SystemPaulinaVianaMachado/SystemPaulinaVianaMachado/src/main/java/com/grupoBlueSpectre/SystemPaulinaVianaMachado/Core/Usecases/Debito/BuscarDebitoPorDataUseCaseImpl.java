@@ -3,11 +3,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 import java.util.Date;
 import java.util.List;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
 
-public class BuscarDebitoPorDataUseCaseImpl implements BuscarPorDataUseCase<DebitoModel>{
+public class BuscarDebitoPorDataUseCaseImpl implements BuscarPorDataUseCase<DebitoDomain>{
 
     private final DebitoGateway debitoGateway;
 
@@ -15,7 +15,7 @@ public class BuscarDebitoPorDataUseCaseImpl implements BuscarPorDataUseCase<Debi
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public List<DebitoModel> execute(Date date) {
+    public List<DebitoDomain> execute(Date date) {
         return debitoGateway.getDebitosByDate(date);
     }
 }

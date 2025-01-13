@@ -3,7 +3,7 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Beans;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorDataUseCase;
@@ -19,19 +19,19 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio.De
 @Configuration
 public class BeanRelatorioGatewayConfig {
     @Bean
-    public AlterarUserCase<RelatorioModel> alterarRelatorio(RelatorioGateway relatorioGateway){
+    public AlterarUserCase<RelatorioDomain> alterarRelatorio(RelatorioGateway relatorioGateway){
         return new AlterarRelatorioUseCaseImpl(relatorioGateway);
     }
     @Bean
-    public BuscarPorDataUseCase<RelatorioModel> buscarRelatorioPorData(RelatorioGateway relatorioGateway){
+    public BuscarPorDataUseCase<RelatorioDomain> buscarRelatorioPorData(RelatorioGateway relatorioGateway){
         return new BuscarRelatorioPorDataUseCaseImpl(relatorioGateway);
     }
     @Bean
-    public BuscarUseCase<RelatorioModel> buscarPagamento(RelatorioGateway relatorioGateway){
+    public BuscarUseCase<RelatorioDomain> buscarPagamento(RelatorioGateway relatorioGateway){
         return new BuscarRelatorioUseCaseImpl(relatorioGateway);
     }
     @Bean
-    public CriarUseCase<RelatorioModel> criarRelatorio(RelatorioGateway relatorioGateway) {
+    public CriarUseCase<RelatorioDomain> criarRelatorio(RelatorioGateway relatorioGateway) {
         return new CriarRelatorioUseCaseImpl(relatorioGateway);
     }
     @Bean

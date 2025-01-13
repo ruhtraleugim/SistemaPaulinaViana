@@ -2,11 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Produto;
 
 import java.util.Optional;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarPorNomeUseCase;
 
-public class BuscarProdutoPorNomeImpl implements BuscarPorNomeUseCase<ProdutoModel> {
+public class BuscarProdutoPorNomeImpl implements BuscarPorNomeUseCase<ProdutoDomain> {
 
     private final ProdutoGateway produtoGateway;
 
@@ -14,7 +14,7 @@ public class BuscarProdutoPorNomeImpl implements BuscarPorNomeUseCase<ProdutoMod
         this.produtoGateway = produtoGateway;
     }
     @Override
-    public Optional<ProdutoModel> execute(String Nome) {
+    public Optional<ProdutoDomain> execute(String Nome) {
         return produtoGateway.getProdutoByNome(Nome);
     }
 }

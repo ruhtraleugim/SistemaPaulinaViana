@@ -2,11 +2,11 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Pagamento;
 
 import java.util.List;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.BuscarUseCase;
 
-public class BuscarPagamentoUseCaseImpl implements BuscarUseCase<PagamentoModel>{
+public class BuscarPagamentoUseCaseImpl implements BuscarUseCase<PagamentoDomain>{
     
     private final PagamentoGateway pagamentoGateway;
 
@@ -14,7 +14,7 @@ public class BuscarPagamentoUseCaseImpl implements BuscarUseCase<PagamentoModel>
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override
-    public List<PagamentoModel> execute() {
+    public List<PagamentoDomain> execute() {
         return pagamentoGateway.getPagamentos();
     }
 }

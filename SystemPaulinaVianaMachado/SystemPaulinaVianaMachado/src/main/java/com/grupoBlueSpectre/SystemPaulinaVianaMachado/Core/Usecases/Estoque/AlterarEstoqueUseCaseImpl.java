@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Estoque;
 
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueModel;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Intefaces.AlterarUserCase;
 
-public class AlterarEstoqueUseCaseImpl implements AlterarUserCase<EstoqueModel> {
+public class AlterarEstoqueUseCaseImpl implements AlterarUserCase<EstoqueDomain> {
    
     private final EstoqueGateway estoqueGateway;
 
@@ -12,7 +12,7 @@ public class AlterarEstoqueUseCaseImpl implements AlterarUserCase<EstoqueModel> 
         this.estoqueGateway = estoqueGateway;
     }
     @Override
-    public EstoqueModel execute(int ID, EstoqueModel estoqueModel) {
+    public EstoqueDomain execute(int ID, EstoqueDomain estoqueModel) {
         return estoqueGateway.alterarEstoque(estoqueModel, ID);
     } 
 }
