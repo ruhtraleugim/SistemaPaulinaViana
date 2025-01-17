@@ -9,15 +9,15 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomai
 
 public interface RelatorioGateway {
 
-        Optional<RelatorioDomain> getRelatorioByID(int ID);
+        Optional<RelatorioDomain> getRelatorioByID(Long ID);
 
         List<RelatorioDomain> getRelatorio();
 
         List<RelatorioDomain> getRelatorioByDate(Date date);
 
-        void deleteRelatorio(int ID);
+        void deleteRelatorio(Long ID);
 
         RelatorioDomain newRelatorio(RelatorioDomain relatorio);
 
-        RelatorioDomain alterarRelatorio(int ID, RelatorioDomain relatorio);
+        RelatorioDomain alterarRelatorio(Long ID, RelatorioDomain relatorio);
 } 

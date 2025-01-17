@@ -13,7 +13,7 @@ public class AlterarVendaUseCaseImpl implements AlterarUserCase<VendaDomain>{
     }
 
     @Override
-    public VendaDomain execute(int ID, VendaDomain venda) {
+    public VendaDomain execute(Long ID, VendaDomain venda) {
         return vendaGateway.alterarVenda(venda, ID);
     }
 }

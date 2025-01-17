@@ -11,7 +11,7 @@ public class DeleteProdutoUseCaseImpl implements DeleteUsecase {
         this.produtoGateway = produtoGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
         produtoGateway.deleteProduto(ID);
     }
     

@@ -14,7 +14,7 @@ public class BuscarPagamentoPorIDUseCaseImpl implements BuscarPorIDUserCase<Paga
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override
-    public Optional<PagamentoDomain> execute(int ID) {
+    public Optional<PagamentoDomain> execute(Long ID) {
         return pagamentoGateway.getPagamentoByID(ID);
     }
 }

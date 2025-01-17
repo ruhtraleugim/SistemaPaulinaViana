@@ -8,7 +8,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 
 public interface ProdutoGateway {
 
-        Optional<ProdutoDomain> getProdutoByID(int ID);
+        Optional<ProdutoDomain> getProdutoByID(Long ID);
 
         Optional<ProdutoDomain> getProdutoByNome(String nomeProduto);
 
@@ -18,7 +18,7 @@ public interface ProdutoGateway {
 
         ProdutoDomain newProduto(ProdutoDomain produtoModel);
 
-        ProdutoDomain alterarProduto(ProdutoDomain produto, int ID);
+        ProdutoDomain alterarProduto(ProdutoDomain produto, Long ID);
 
-        void deleteProduto(int ID);
+        void deleteProduto(Long ID);
 }

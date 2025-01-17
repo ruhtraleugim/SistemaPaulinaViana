@@ -11,7 +11,7 @@ public class DeleteRelatorioUseCaseImpl implements DeleteUsecase {
         this.relatorioGateway = relatorioGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
        relatorioGateway.deleteRelatorio(ID);
     }
     

@@ -12,7 +12,7 @@ public class AlterarDebitoUseCaseImpl implements AlterarUserCase<DebitoDomain> {
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public DebitoDomain execute(int ID, DebitoDomain debito) {
+    public DebitoDomain execute(Long ID, DebitoDomain debito) {
         debitoGateway.deleteDebito(ID);
         return debitoGateway.newDebito(debito);
     }

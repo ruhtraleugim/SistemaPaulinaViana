@@ -14,7 +14,7 @@ public class BuscarVendaPorIDUseCaseImpl implements BuscarPorIDUserCase<VendaDom
         this.vendaGateway = vendaGateway;
     }
     @Override
-    public Optional<VendaDomain> execute(int ID) {
+    public Optional<VendaDomain> execute(Long ID) {
         return vendaGateway.getVendaByID(ID);
     }
 }

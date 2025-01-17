@@ -7,7 +7,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDoma
 
 public interface FornecedorGateway {
     
-        Optional<FornecedorDomain> getFornecedorByID(int ID);
+        Optional<FornecedorDomain> getFornecedorByID(Long ID);
 
         Optional<FornecedorDomain> getForncedorByName(String nome);
 
@@ -15,7 +15,7 @@ public interface FornecedorGateway {
 
         FornecedorDomain newFornecedor(FornecedorDomain fornecedor);
 
-        Void deleteFornecedor(int ID);
+        Void deleteFornecedor(Long ID);
         
-        FornecedorDomain alterarFornecedor(int ID, FornecedorDomain fornecedor);
+        FornecedorDomain alterarFornecedor(Long ID, FornecedorDomain fornecedor);
 }

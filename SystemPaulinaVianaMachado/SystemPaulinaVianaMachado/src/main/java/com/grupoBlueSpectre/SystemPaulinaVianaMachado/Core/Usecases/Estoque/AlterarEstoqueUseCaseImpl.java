@@ -12,7 +12,7 @@ public class AlterarEstoqueUseCaseImpl implements AlterarUserCase<EstoqueDomain>
         this.estoqueGateway = estoqueGateway;
     }
     @Override
-    public EstoqueDomain execute(int ID, EstoqueDomain estoqueModel) {
+    public EstoqueDomain execute(Long ID, EstoqueDomain estoqueModel) {
         return estoqueGateway.alterarEstoque(estoqueModel, ID);
     } 
 }

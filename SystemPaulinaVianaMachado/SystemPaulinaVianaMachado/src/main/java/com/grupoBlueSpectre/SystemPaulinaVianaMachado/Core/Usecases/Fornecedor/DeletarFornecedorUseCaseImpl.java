@@ -11,7 +11,7 @@ public class DeletarFornecedorUseCaseImpl implements DeleteUsecase {
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
         fornecedorGateway.deleteFornecedor(ID);
     }
     

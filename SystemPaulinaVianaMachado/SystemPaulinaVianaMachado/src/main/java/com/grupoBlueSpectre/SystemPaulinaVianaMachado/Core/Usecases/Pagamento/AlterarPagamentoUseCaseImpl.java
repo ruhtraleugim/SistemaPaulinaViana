@@ -12,7 +12,7 @@ public class AlterarPagamentoUseCaseImpl implements AlterarUserCase<PagamentoDom
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override
-    public PagamentoDomain execute(int ID, PagamentoDomain altPagamento) {
+    public PagamentoDomain execute(Long ID, PagamentoDomain altPagamento) {
         return pagamentoGateway.alterarPagamentoModel(ID, altPagamento);
     }
 }

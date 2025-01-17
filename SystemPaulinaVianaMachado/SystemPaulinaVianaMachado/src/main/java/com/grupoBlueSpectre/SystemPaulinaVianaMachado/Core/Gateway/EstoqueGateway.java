@@ -8,15 +8,15 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 
 public interface EstoqueGateway {
     
-        Optional<EstoqueDomain> getEstoqueByID(int ID);
+        Optional<EstoqueDomain> getEstoqueByID(Long ID);
 
         List<EstoqueDomain> getEstoques();
 
         List<EstoqueDomain> getEstoqueByDate(Date date);
 
-        void deletarEstoque(int ID);
+        void deletarEstoque(Long ID);
 
         EstoqueDomain criarEstoque(EstoqueDomain estoqueModel);
 
-        EstoqueDomain alterarEstoque(EstoqueDomain estoque, int ID);
+        EstoqueDomain alterarEstoque(EstoqueDomain estoque, Long iD);
 }

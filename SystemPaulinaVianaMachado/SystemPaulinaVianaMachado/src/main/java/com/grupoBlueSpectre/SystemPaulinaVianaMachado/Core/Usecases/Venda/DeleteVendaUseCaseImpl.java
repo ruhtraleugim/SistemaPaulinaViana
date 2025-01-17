@@ -11,7 +11,7 @@ public class DeleteVendaUseCaseImpl implements DeleteUsecase{
         this.vendaGateway = vendaGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
         vendaGateway.deleteVenda(ID);
     }
 }

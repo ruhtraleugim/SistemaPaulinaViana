@@ -8,15 +8,15 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 
 public interface VendaGateway {
     
-        Optional<VendaDomain> getVendaByID(int id); 
+        Optional<VendaDomain> getVendaByID(Long id); 
         
         List<VendaDomain> getVendasByDate(Date Data);
 
         List<VendaDomain> getVendas();
         
-        void deleteVenda(int id);
+        void deleteVenda(Long id);
 
         VendaDomain newVenda( VendaDomain venda);
 
-        VendaDomain alterarVenda(VendaDomain venda, int ID);
+        VendaDomain alterarVenda(VendaDomain venda, Long ID);
 }

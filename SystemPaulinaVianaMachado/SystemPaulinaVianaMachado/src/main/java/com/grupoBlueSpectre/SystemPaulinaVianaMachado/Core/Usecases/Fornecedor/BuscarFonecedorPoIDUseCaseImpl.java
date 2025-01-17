@@ -14,7 +14,7 @@ public class BuscarFonecedorPoIDUseCaseImpl implements BuscarPorIDUserCase<Forne
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override
-    public Optional<FornecedorDomain> execute(int ID) {
+    public Optional<FornecedorDomain> execute(Long ID) {
         return fornecedorGateway.getFornecedorByID(ID);
     }
 } 

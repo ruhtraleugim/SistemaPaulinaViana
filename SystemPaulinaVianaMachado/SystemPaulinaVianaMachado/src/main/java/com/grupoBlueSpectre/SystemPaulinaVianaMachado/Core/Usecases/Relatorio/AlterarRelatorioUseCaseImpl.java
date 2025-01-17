@@ -12,7 +12,7 @@ public class AlterarRelatorioUseCaseImpl implements AlterarUserCase<RelatorioDom
         this.relatorioGateway = relatorioGateway;
     }
     @Override
-    public RelatorioDomain execute(int ID, RelatorioDomain relatorio) {
+    public RelatorioDomain execute(Long ID, RelatorioDomain relatorio) {
       return relatorioGateway.alterarRelatorio(ID, relatorio);
     }
 }

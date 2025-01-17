@@ -12,7 +12,7 @@ public class AlterarFornecedorUseCaseImpl implements AlterarUserCase<FornecedorD
         this.fornecedorGateway = fornecedorGateway;
     }
     @Override
-    public FornecedorDomain execute(int ID, FornecedorDomain fornecedor) {
+    public FornecedorDomain execute(Long ID, FornecedorDomain fornecedor) {
         return fornecedorGateway.alterarFornecedor(ID, fornecedor);
     }
 }

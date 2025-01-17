@@ -14,7 +14,7 @@ public class BuscarDebitoPorIDUseCaseImpl implements BuscarPorIDUserCase<DebitoD
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public Optional<DebitoDomain> execute(int ID) {
+    public Optional<DebitoDomain> execute(Long ID) {
         return debitoGateway.getDebitosByID(ID);
     }
 }

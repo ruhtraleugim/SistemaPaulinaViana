@@ -11,7 +11,7 @@ public class DeletePagamentoUseCaseImpl implements DeleteUsecase{
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
         pagamentoGateway.deletePagamento(ID);
     }
 }

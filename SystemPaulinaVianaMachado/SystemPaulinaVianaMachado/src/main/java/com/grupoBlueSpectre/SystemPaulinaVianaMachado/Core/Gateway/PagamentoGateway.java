@@ -8,7 +8,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomai
 
 public interface PagamentoGateway {
        
-        Optional<PagamentoDomain> getPagamentoByID(int ID);
+        Optional<PagamentoDomain> getPagamentoByID(Long ID);
 
         List<PagamentoDomain> getPagamentos();
 
@@ -16,7 +16,7 @@ public interface PagamentoGateway {
 
         PagamentoDomain newPagamentoModel(PagamentoDomain pagamento);
 
-        PagamentoDomain alterarPagamentoModel(int ID, PagamentoDomain pagamento);
+        PagamentoDomain alterarPagamentoModel(Long ID, PagamentoDomain pagamento);
 
-        Void deletePagamento(int ID);
+        Void deletePagamento(Long ID);
 }

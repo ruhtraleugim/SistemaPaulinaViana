@@ -12,7 +12,7 @@ public class AlterarProdutoUseCaseImpl implements AlterarUserCase<ProdutoDomain>
         this.produtoGateway = produtoGateway;
     }
     @Override
-    public ProdutoDomain execute(int ID, ProdutoDomain newProduto) {
+    public ProdutoDomain execute(Long ID, ProdutoDomain newProduto) {
        return produtoGateway.alterarProduto(newProduto, ID);
     }
 }

@@ -11,7 +11,7 @@ public class DeleteEstoqueUseCaseImpl implements DeleteUsecase{
         this.estoqueGateway = estoqueGateway;
     }
     @Override
-    public void execute(int ID) {
+    public void execute(Long ID) {
         estoqueGateway.deletarEstoque(ID);
     }
 }

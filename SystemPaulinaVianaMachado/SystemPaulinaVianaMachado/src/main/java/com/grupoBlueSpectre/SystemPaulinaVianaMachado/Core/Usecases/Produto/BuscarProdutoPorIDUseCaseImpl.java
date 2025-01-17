@@ -14,7 +14,7 @@ public class BuscarProdutoPorIDUseCaseImpl implements BuscarPorIDUserCase<Produt
         this.produtoGateway = produtoGateway;
     }
     @Override
-    public Optional<ProdutoDomain> execute(int ID) {
+    public Optional<ProdutoDomain> execute(Long ID) {
         return produtoGateway.getProdutoByID(ID);
     }
 }
