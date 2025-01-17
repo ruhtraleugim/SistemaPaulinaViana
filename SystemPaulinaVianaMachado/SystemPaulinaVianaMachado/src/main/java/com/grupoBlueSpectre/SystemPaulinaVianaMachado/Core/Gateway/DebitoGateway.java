@@ -12,9 +12,9 @@ public interface DebitoGateway {
         
         List<DebitoDomain> GetDebito();
 
-        Optional<DebitoDomain> getDebitosByID(int ID);
+        Optional<DebitoDomain> getDebitosByID(Long ID);
 
         List<DebitoDomain> getDebitosByDate(Date date);
 
-        void deleteDebito(int ID);
+        void deleteDebito(Long ID);
 }
