@@ -1,0 +1,13 @@
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
+
+import java.util.Date;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.StatusPagamento;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.TipoPagamento;
+
+public record PagamentoDomain(Long idPagamento,
+                            double valorPago,
+                            String cpfCobrador,
+                            String recebedorPagamento,
+                            Date dataPagamento,
+                            TipoPagamento formaPagamento,
+                            StatusPagamento statusPagamento) {}  
