@@ -2,9 +2,9 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Fornecedor;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.FornecedorDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.FornecedorEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.ProdutoMapper;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.FornecedorEntity;
 
 public class FornecedorMapper implements MapperInteface<FornecedorDomain, FornecedorDTO, FornecedorEntity>{
     

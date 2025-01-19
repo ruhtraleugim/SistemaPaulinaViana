@@ -2,8 +2,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Pagamento;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.PagamentoDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.PagamentoEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.PagamentoEntity;
 
 public class PagamentoMapper implements MapperInteface<PagamentoDomain, PagamentoDTO, PagamentoEntity>{
 

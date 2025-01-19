@@ -6,9 +6,9 @@ import java.util.Optional;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.DebitoEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Debito.DebitoMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.DebitoPersistence;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.DebitoEntity;
 
 public class DebitoInfraGateway implements DebitoGateway {
 

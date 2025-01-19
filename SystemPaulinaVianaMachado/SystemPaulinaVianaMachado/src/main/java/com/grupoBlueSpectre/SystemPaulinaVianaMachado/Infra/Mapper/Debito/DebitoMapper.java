@@ -2,8 +2,8 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Debito;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.DebitoDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.DebitoEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.DebitoEntity;
 
 public class DebitoMapper implements MapperInteface<DebitoDomain, DebitoDTO, DebitoEntity> {
 

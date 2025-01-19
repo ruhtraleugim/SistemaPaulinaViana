@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

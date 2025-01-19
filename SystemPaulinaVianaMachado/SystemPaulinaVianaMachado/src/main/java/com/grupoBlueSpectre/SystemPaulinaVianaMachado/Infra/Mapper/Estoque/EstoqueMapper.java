@@ -2,10 +2,10 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Estoque;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.EstoqueDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.EstoqueEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Fornecedor.FornecedorMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.ProdutoMapper;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.EstoqueEntity;
 
 public class EstoqueMapper implements MapperInteface<EstoqueDomain, EstoqueDTO, EstoqueEntity> {
     

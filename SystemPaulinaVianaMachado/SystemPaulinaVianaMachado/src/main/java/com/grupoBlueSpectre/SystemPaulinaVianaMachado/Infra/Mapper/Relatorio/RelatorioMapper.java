@@ -2,10 +2,10 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Relatorio;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.RelatorioDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.RelatorioEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Estoque.EstoqueMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Venda.VendaMapper;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.RelatorioEntity;
 
 public class RelatorioMapper implements MapperInteface<RelatorioDomain, RelatorioDTO, RelatorioEntity> {
 

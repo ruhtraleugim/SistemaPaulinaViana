@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
     
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;

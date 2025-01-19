@@ -1,4 +1,4 @@
-package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities;
+package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
 
 import java.util.Date;
 import jakarta.persistence.*;

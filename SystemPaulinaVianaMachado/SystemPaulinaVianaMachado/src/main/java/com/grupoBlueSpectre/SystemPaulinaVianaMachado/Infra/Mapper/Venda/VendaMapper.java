@@ -4,10 +4,10 @@ import org.springframework.stereotype.Component;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.VendaDTO;
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Entities.VendaEntity;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Pagamento.PagamentoMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.ProdutoMapper;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.VendaEntity;
 
 @Component
 public class VendaMapper implements MapperInteface<VendaDomain, VendaDTO, VendaEntity>{
