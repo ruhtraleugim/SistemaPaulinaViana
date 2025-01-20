@@ -20,7 +20,9 @@ import java.util.Date;
 public class ProdutoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long idProduto;
+
     private String descricaoProduto;
     private String nomeProduto;
     private Date validadeProduto;
@@ -29,6 +31,8 @@ public class ProdutoEntity {
     private TipoProduto tipoProduto;
     
     private double valorProduto;
-
+    
+    @ManyToOne
+    @JoinColumn(name = "idFornecedor")
     private FornecedorEntity fornecedorEntity;
 }

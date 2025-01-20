@@ -19,6 +19,9 @@ import lombok.ToString;
 @Entity(name = "PAGAMENTO")
 @Table(name = "PAGAMENTO")
 public class PagamentoEntity {
+
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long idPagamento;
         private double valorPagamento;
         private String cpfCobrador;
@@ -26,7 +29,8 @@ public class PagamentoEntity {
         private Date dataPagamento;
 
         @Enumerated(EnumType.STRING)
-        private TipoPagamento tipoPagamento; 
+        private TipoPagamento tipoPagamento;
+         
         @Enumerated(EnumType.STRING)     
         private StatusPagamento statusPagamento;
 }

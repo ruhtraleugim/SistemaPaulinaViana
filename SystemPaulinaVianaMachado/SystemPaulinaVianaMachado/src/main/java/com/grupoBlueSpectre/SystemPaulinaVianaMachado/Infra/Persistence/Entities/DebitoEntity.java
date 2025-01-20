@@ -1,11 +1,20 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
     
-import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @Entity(name = "DEBITO")
 @Table(name = "DEBITO")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class DebitoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,66 +27,7 @@ public class DebitoEntity {
 
     @ManyToOne
     @JoinColumn(name = "idPagamento")
-    private PagamentoDomain pagamento;
+    private PagamentoEntity pagamento;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public double getValorDebito() {
-        return valorDebito;
-    }
-
-    public void setValorDebito(double valorDebito) {
-        this.valorDebito = valorDebito;
-    }
-
-    public String getCpfCobrador() {
-        return cpfCobrador;
-    }
-
-    public void setCpfCobrador(String cpfCobrador) {
-        this.cpfCobrador = cpfCobrador;
-    }
-
-    public String getDescricaoConta() {
-        return descricaoConta;
-    }
-
-    public void setDescricaoConta(String descricaoConta) {
-        this.descricaoConta = descricaoConta;
-    }
-
-    public String getTipoConta() {
-        return tipoConta;
-    }
-
-    public void setTipoConta(String tipoConta) {
-        this.tipoConta = tipoConta;
-    }
-
-    public PagamentoDomain getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(PagamentoDomain pagamento) {
-        this.pagamento = pagamento;
-    }
-
-    public DebitoEntity(Long id, double valorDebito, String cpfCobrador, String descricaoConta, String tipoConta,
-            PagamentoDomain pagamento) {
-        this.id = id;
-        this.valorDebito = valorDebito;
-        this.cpfCobrador = cpfCobrador;
-        this.descricaoConta = descricaoConta;
-        this.tipoConta = tipoConta;
-        this.pagamento = pagamento;
-    }
-
-    public DebitoEntity() {
-    }
 }

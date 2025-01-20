@@ -8,6 +8,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Venda.VendaMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.VendaPersistence;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.VendaEntity;
 
 public class VendaInfraGateway implements VendaGateway{
     
@@ -20,32 +21,30 @@ public class VendaInfraGateway implements VendaGateway{
     }
     @Override
     public Optional<VendaDomain> getVendaByID(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVendaByID'");
+        return vendaRepository.findById(id).map(vendaMapper::entityToDomain);
     }
     @Override
     public List<VendaDomain> getVendasByDate(Date Data) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVendasByDate'");
+        return vendaRepository.findByDate(Data).stream().map(vendaMapper::entityToDomain).toList();
     }
     @Override
     public List<VendaDomain> getVendas() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getVendas'");
+        return vendaRepository.findAll().stream().map(vendaMapper::entityToDomain).toList();
     }
     @Override
     public void deleteVenda(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteVenda'");
+        vendaRepository.deleteById(id);
     }
     @Override
     public VendaDomain newVenda(VendaDomain venda) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newVenda'");
+        VendaEntity vendaEntity = vendaMapper.toEntity(venda);
+        VendaEntity savedEntity = vendaRepository.save(vendaEntity);
+        return vendaMapper.entityToDomain(savedEntity);
     }
     @Override
     public VendaDomain alterarVenda(VendaDomain venda, Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'alterarVenda'");
+        VendaEntity relatorioEntity = vendaMapper.toEntity(venda);
+        vendaRepository.updateVenda(relatorioEntity, ID);
+        return vendaMapper.entityToDomain(relatorioEntity);
     }   
 }

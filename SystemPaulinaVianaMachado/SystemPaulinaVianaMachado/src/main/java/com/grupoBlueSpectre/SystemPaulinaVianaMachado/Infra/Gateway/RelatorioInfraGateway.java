@@ -8,6 +8,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomai
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.RelatorioGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Relatorio.RelatorioMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.RelatorioPersistence;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.RelatorioEntity;
 
 public class RelatorioInfraGateway implements RelatorioGateway{
 
@@ -20,38 +21,30 @@ public class RelatorioInfraGateway implements RelatorioGateway{
     }
     @Override
     public Optional<RelatorioDomain> getRelatorioByID(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRelatorioByID'");
+        return relatorioRepository.findById(ID).map(relatorioMapper::entityToDomain);
     }
-
     @Override
     public List<RelatorioDomain> getRelatorio() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRelatorio'");
+        return relatorioRepository.findAll().stream().map(relatorioMapper::entityToDomain).toList();   
     }
-
     @Override
     public List<RelatorioDomain> getRelatorioByDate(Date date) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRelatorioByDate'");
+        return relatorioRepository.findByDate(date).stream().map(relatorioMapper::entityToDomain).toList();
     }
-
     @Override
     public void deleteRelatorio(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteRelatorio'");
+        relatorioRepository.deleteById(ID);
     }
-
     @Override
     public RelatorioDomain newRelatorio(RelatorioDomain relatorio) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newRelatorio'");
+        RelatorioEntity relatorioEntity = relatorioMapper.toEntity(relatorio);
+        RelatorioEntity savedEntity = relatorioRepository.save(relatorioEntity);
+        return relatorioMapper.entityToDomain(savedEntity);
     }
-
     @Override
     public RelatorioDomain alterarRelatorio(Long ID, RelatorioDomain relatorio) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'alterarRelatorio'");
+        RelatorioEntity relatorioEntity = relatorioMapper.toEntity(relatorio);
+        relatorioRepository.updateRelatorio(relatorioEntity, ID);
+        return relatorioMapper.entityToDomain(relatorioEntity);
     }
-    
 }

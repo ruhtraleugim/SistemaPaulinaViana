@@ -39,8 +39,9 @@ public class PagamentoInfraGateway implements PagamentoGateway {
     }
     @Override
     public PagamentoDomain alterarPagamentoModel(Long ID, PagamentoDomain pagamento) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'alterarPagamentoModel'");
+        PagamentoEntity pagamentoEntity = pagamentoMapper.toEntity(pagamento);
+        pagamentoRepository.updatePagamento(pagamentoEntity, ID);
+        return pagamentoMapper.entityToDomain(pagamentoEntity);
     }
     @Override
     public void deletePagamento(Long ID) {

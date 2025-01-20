@@ -8,6 +8,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.ProdutoMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.ProdutoPercistence;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.ProdutoEntity;
 
 public class ProdutoInfraGateway implements ProdutoGateway {
 
@@ -20,37 +21,34 @@ public class ProdutoInfraGateway implements ProdutoGateway {
     }   
     @Override
     public Optional<ProdutoDomain> getProdutoByID(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getProdutoByID'");
+        return produtoRepository.findById(ID).map(produtoMapper::entityToDomain);
     }
     @Override
     public Optional<ProdutoDomain> getProdutoByNome(String nomeProduto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getProdutoByNome'");
+        return produtoRepository.findByName(nomeProduto).map(produtoMapper::entityToDomain);
     }
     @Override
     public List<ProdutoDomain> getProdutoByDate(Date date) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getProdutoByDate'");
+        return produtoRepository.findByDate(date).stream().map(produtoMapper::entityToDomain).toList();
     }
     @Override
     public List<ProdutoDomain> getProduto() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getProduto'");
+        return produtoRepository.findAll().stream().map(produtoMapper::entityToDomain).toList();
     }
     @Override
     public ProdutoDomain newProduto(ProdutoDomain produtoModel) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newProduto'");
+        ProdutoEntity produtoEntity = produtoMapper.toEntity(produtoModel);
+        ProdutoEntity savedEntity = produtoRepository.save(produtoEntity);
+        return produtoMapper.entityToDomain(savedEntity);
     }
     @Override
     public ProdutoDomain alterarProduto(ProdutoDomain produto, Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'alterarProduto'");
+        ProdutoEntity produtoEntity = produtoMapper.toEntity(produto);
+        produtoRepository.updateProduto(produtoEntity, ID);
+        return produtoMapper.entityToDomain(produtoEntity);
     }
     @Override
     public void deleteProduto(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteProduto'");
+        produtoRepository.deleteById(ID);
     }
 }

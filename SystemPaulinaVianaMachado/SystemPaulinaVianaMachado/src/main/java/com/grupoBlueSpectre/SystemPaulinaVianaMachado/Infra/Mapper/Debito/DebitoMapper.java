@@ -3,10 +3,16 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Debito;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.DebitoDTO;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Pagamento.PagamentoMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.DebitoEntity;
 
 public class DebitoMapper implements MapperInteface<DebitoDomain, DebitoDTO, DebitoEntity> {
 
+    private final PagamentoMapper pagamentoMapper;
+
+    public DebitoMapper(PagamentoMapper pagamentoMapper) {
+        this.pagamentoMapper = pagamentoMapper;
+    }
     @Override
     public DebitoDomain toDomain(DebitoDTO debitoDTO) {
         if (debitoDTO == null) {
@@ -41,7 +47,7 @@ public class DebitoMapper implements MapperInteface<DebitoDomain, DebitoDTO, Deb
                                 debitoDomain.cobrador(),
                                 debitoDomain.descricaoConta(),
                                 debitoDomain.tipoConta(),
-                                debitoDomain.pagamento());
+                                pagamentoMapper.toEntity(debitoDomain.pagamento()));
     }
     @Override
     public DebitoDomain entityToDomain(DebitoEntity debitoEntity) {
@@ -53,6 +59,6 @@ public class DebitoMapper implements MapperInteface<DebitoDomain, DebitoDTO, Deb
                                 debitoEntity.getCpfCobrador(),
                                 debitoEntity.getDescricaoConta(),
                                 debitoEntity.getTipoConta(),
-                                debitoEntity.getPagamento());
+                                pagamentoMapper.entityToDomain(debitoEntity.getPagamento()));
     }
 }

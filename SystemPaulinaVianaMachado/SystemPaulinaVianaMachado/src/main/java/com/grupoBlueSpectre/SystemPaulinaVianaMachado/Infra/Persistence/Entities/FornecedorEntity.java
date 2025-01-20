@@ -30,7 +30,7 @@ public class FornecedorEntity {
     @Enumerated(EnumType.STRING)
     private TipoProduto tipoProduto;
 
-    @ManyToMany()
+    @ManyToOne
     @JoinColumn(name = "idProduto")
     private ProdutoEntity produto;;
 }
