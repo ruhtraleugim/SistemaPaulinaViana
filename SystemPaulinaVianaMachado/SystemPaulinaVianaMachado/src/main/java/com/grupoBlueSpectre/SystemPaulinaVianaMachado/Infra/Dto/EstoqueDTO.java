@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public record EstoqueDTO(Long idEstoque,          
                          int versaoEstoque,
                          int quantidadeProduto,
-                         Date dataEstoque,
+                         LocalDate dataEstoque,
                          FornecedorDTO fornecedor,
                          ProdutoDTO produto) {}  

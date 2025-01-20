@@ -12,14 +12,18 @@ import jakarta.transaction.Transactional;
 @Repository
 public interface FornecedorPercistence extends JpaRepository<FornecedorEntity, Long >{
     
-    Optional<FornecedorEntity> findByNome(String nome);
+    Optional<FornecedorEntity> findByFornecedorNome(String nome);
 
     @Modifying
     @Transactional
-    @Query("UPDATE FornecedorEntity f SET f.valorProdutoFornecedor = :#{#entity.valorProdutoFornecedor}, " +
-            "f.fornecedorEndereco = :#{#entity.fornecedorEndereco}, " + "f.fornecedorNome = :#{#entity.fornecedorNome}, " +
-            "f.fornecedorTelefone = :#{#entity.fornecedorTelefone}, " + "f.fornecedorEmail = :#{#entity.fornecedorEmail}, " +
-            "f.tipoProduto = :#{#entity.tipoProduto} " + "WHERE f.idFornecedor = :id")
+    @Query("UPDATE FORNECEDOR f SET f.valorProdutoFornecedor = :valorProdutoFornecedor, " +
+        "f.fornecedorEndereco = :fornecedorEndereco, " +
+        "f.fornecedorNome = :fornecedorNome, " +
+        "f.fornecedorTelefone = :fornecedorTelefone, " +
+        "f.fornecedorEmail = :fornecedorEmail, " +
+        "f.tipoProduto = :tipoProduto, " +
+        "f.produto = :produto " +
+        "WHERE f.idFornecedor = :idFornecedor")
     FornecedorEntity updadeEstoque(FornecedorEntity entity,Long id);
     
 }

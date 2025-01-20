@@ -1,5 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Debito;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class BuscarDebitoPorDataUseCaseImpl implements BuscarPorDataUseCase<Debi
         this.debitoGateway = debitoGateway;
     }
     @Override
-    public List<DebitoDomain> execute(Date date) {
+    public List<DebitoDomain> execute(LocalDate date) {
         return debitoGateway.getDebitosByDate(date);
     }
 }

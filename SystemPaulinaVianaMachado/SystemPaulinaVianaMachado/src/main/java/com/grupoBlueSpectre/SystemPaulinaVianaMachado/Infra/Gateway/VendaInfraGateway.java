@@ -1,8 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.VendaGateway;
@@ -10,6 +12,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Venda.VendaMa
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.VendaPersistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.VendaEntity;
 
+@Service
 public class VendaInfraGateway implements VendaGateway{
     
     private final VendaPersistence vendaRepository;
@@ -24,8 +27,8 @@ public class VendaInfraGateway implements VendaGateway{
         return vendaRepository.findById(id).map(vendaMapper::entityToDomain);
     }
     @Override
-    public List<VendaDomain> getVendasByDate(Date Data) {
-        return vendaRepository.findByDate(Data).stream().map(vendaMapper::entityToDomain).toList();
+    public List<VendaDomain> getVendasByDate(LocalDate Data) {
+        return vendaRepository.findByDataVenda(Data).stream().map(vendaMapper::entityToDomain).toList();
     }
     @Override
     public List<VendaDomain> getVendas() {

@@ -1,16 +1,20 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Fornecedor;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.FornecedorDTO;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.ProdutoMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.FornecedorEntity;
 
+@Component
 public class FornecedorMapper implements MapperInteface<FornecedorDomain, FornecedorDTO, FornecedorEntity>{
     
     private final ProdutoMapper produtoMapper;
     
-    public FornecedorMapper(ProdutoMapper produtoMapper){
+    public FornecedorMapper(@Lazy ProdutoMapper produtoMapper){
         this.produtoMapper = produtoMapper;
     }
     @Override

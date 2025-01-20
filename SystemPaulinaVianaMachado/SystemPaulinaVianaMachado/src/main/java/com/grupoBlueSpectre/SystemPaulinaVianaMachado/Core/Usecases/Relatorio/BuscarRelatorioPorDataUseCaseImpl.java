@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Relatorio;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
@@ -15,7 +15,7 @@ public class BuscarRelatorioPorDataUseCaseImpl implements BuscarPorDataUseCase<R
         this.relatorioGateway = relatorioGateway;
     }
     @Override
-    public List<RelatorioDomain> execute(Date date) {
+    public List<RelatorioDomain> execute(LocalDate date) {
         return relatorioGateway.getRelatorioByDate(date);
     } 
 }

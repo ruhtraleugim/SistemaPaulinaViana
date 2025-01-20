@@ -1,5 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Venda;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
@@ -15,7 +16,7 @@ public class VendaMapper implements MapperInteface<VendaDomain, VendaDTO, VendaE
     private final ProdutoMapper produtoMapper;
     private final PagamentoMapper pagamentoMapper;
 
-    public VendaMapper(ProdutoMapper produtoMapper, PagamentoMapper pagamentoMapper) {
+    public VendaMapper(@Lazy ProdutoMapper produtoMapper,@Lazy PagamentoMapper pagamentoMapper) {
         this.produtoMapper = produtoMapper;
         this.pagamentoMapper = pagamentoMapper;
     }

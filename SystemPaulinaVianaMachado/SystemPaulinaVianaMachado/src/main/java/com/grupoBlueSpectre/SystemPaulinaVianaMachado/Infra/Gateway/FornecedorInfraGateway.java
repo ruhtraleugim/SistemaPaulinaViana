@@ -3,12 +3,15 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.FornecedorGateway;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Fornecedor.FornecedorMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.FornecedorPercistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.FornecedorEntity;
 
+@Service
 public class FornecedorInfraGateway implements FornecedorGateway{
 
     private final FornecedorPercistence fornecedorRepository;
@@ -24,7 +27,7 @@ public class FornecedorInfraGateway implements FornecedorGateway{
     }
     @Override
     public Optional<FornecedorDomain> getForncedorByName(String nome) {
-        return fornecedorRepository.findByNome(nome).map(fornecedorMapper::entityToDomain);
+        return fornecedorRepository.findByFornecedorNome(nome).map(fornecedorMapper::entityToDomain);
     }
     @Override
     public List<FornecedorDomain> getFornecedores() {

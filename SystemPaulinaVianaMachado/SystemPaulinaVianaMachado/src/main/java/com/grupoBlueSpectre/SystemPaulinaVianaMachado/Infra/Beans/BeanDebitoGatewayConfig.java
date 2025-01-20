@@ -33,4 +33,8 @@ public class BeanDebitoGatewayConfig {
     public  DeleteUsecase deleteDebito(DebitoGateway debitoGateway){
         return new DeleteDebitoUseCaseImpl(debitoGateway);
     }
+    @Bean
+    public AlterarUserCase<DebitoDomain> updateDebito(DebitoGateway debitoGateway){
+        return new AlterarDebitoUseCaseImpl(debitoGateway);
+    }
 }

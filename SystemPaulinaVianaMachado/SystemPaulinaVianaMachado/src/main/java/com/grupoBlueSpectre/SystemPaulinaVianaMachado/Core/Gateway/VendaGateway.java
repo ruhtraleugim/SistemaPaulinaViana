@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,7 +10,7 @@ public interface VendaGateway {
     
         Optional<VendaDomain> getVendaByID(Long id); 
         
-        List<VendaDomain> getVendasByDate(Date Data);
+        List<VendaDomain> getVendasByDate(LocalDate Data);
 
         List<VendaDomain> getVendas();
         

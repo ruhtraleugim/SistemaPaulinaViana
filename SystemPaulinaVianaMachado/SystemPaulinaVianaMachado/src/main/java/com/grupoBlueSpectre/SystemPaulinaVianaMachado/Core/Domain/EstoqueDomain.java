@@ -1,10 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public record EstoqueDomain(Long idEstoque,         
                             int versaoEstoque,
                             int quantidadeProduto,
-                            Date dataEstoque,
+                            LocalDate dataEstoque,
                             FornecedorDomain fornecedor,
                             ProdutoDomain produto) {} 

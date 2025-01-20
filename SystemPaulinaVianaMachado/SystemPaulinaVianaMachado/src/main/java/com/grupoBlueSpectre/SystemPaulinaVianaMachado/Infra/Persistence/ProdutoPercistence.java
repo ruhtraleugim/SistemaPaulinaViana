@@ -12,17 +12,23 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities
 
 import jakarta.transaction.Transactional;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Repository
 public interface ProdutoPercistence extends JpaRepository<ProdutoEntity, Long> {
     
-    Optional<ProdutoEntity> findByName(String name);
+    Optional<ProdutoEntity> findByNomeProduto(String name);
 
-    List<ProdutoEntity> findByDate(Date date);
+    List<ProdutoEntity> findByValidadeProduto(LocalDate validadeProduto);
 
     @Modifying
     @Transactional
-    @Query
-    ProdutoPercistence updateProduto(ProdutoEntity entity , Long ID);
+    @Query("UPDATE PRODUTO p SET p.descricaoProduto = :descricaoProduto, " +
+       "p.nomeProduto = :nomeProduto, " +
+       "p.validadeProduto = :validadeProduto, " +
+       "p.tipoProduto = :tipoProduto, " +
+       "p.valorProduto = :valorProduto, " +
+       "p.fornecedorEntity = :fornecedorEntity " +
+       "WHERE p.idProduto = :idProduto")
+    ProdutoPercistence updateProduto(ProdutoEntity entity , Long id);
 }

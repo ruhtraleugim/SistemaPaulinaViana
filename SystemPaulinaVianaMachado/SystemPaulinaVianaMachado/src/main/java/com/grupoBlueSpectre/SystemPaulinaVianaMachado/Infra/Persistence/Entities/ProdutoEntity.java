@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -25,7 +26,7 @@ public class ProdutoEntity {
 
     private String descricaoProduto;
     private String nomeProduto;
-    private Date validadeProduto;
+    private LocalDate validadeProduto;
 
     @Enumerated(EnumType.STRING)
     private TipoProduto tipoProduto;

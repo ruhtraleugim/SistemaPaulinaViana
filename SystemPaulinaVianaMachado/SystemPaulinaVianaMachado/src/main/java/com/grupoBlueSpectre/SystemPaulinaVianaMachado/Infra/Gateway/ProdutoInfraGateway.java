@@ -1,8 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.ProdutoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.ProdutoGateway;
@@ -10,6 +12,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Produto.Produ
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.ProdutoPercistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.ProdutoEntity;
 
+@Service
 public class ProdutoInfraGateway implements ProdutoGateway {
 
     private final ProdutoPercistence produtoRepository;
@@ -25,11 +28,11 @@ public class ProdutoInfraGateway implements ProdutoGateway {
     }
     @Override
     public Optional<ProdutoDomain> getProdutoByNome(String nomeProduto) {
-        return produtoRepository.findByName(nomeProduto).map(produtoMapper::entityToDomain);
+        return produtoRepository.findByNomeProduto(nomeProduto).map(produtoMapper::entityToDomain);
     }
     @Override
-    public List<ProdutoDomain> getProdutoByDate(Date date) {
-        return produtoRepository.findByDate(date).stream().map(produtoMapper::entityToDomain).toList();
+    public List<ProdutoDomain> getProdutoByDate(LocalDate date) {
+        return produtoRepository.findByValidadeProduto(date).stream().map(produtoMapper::entityToDomain).toList();
     }
     @Override
     public List<ProdutoDomain> getProduto() {

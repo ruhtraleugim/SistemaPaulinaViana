@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Venda;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.VendaDomain;
@@ -15,7 +15,7 @@ public class BuscarVendaPorDiaUseCaseImpl  implements BuscarPorDataUseCase<Venda
         this.vendaGateway = vendaGateway;
     }
     @Override
-    public List<VendaDomain> execute(Date date) {
+    public List<VendaDomain> execute(LocalDate date) {
         return vendaGateway.getVendasByDate(date);
     }
 }

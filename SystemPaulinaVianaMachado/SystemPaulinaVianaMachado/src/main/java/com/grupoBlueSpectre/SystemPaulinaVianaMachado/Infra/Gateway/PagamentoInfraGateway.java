@@ -1,8 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.PagamentoGateway;
@@ -10,6 +12,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Pagamento.Pag
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.PagamentoPersistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.PagamentoEntity;
 
+@Service
 public class PagamentoInfraGateway implements PagamentoGateway {
 
     private final PagamentoPersistence pagamentoRepository;
@@ -28,8 +31,8 @@ public class PagamentoInfraGateway implements PagamentoGateway {
         return pagamentoRepository.findAll().stream().map(pagamentoMapper::entityToDomain).toList();
     }
     @Override
-    public List<PagamentoDomain> getPagamentoByDate(Date date) {
-        return pagamentoRepository.findByDate(date).stream().map(pagamentoMapper::entityToDomain).toList();
+    public List<PagamentoDomain> getPagamentoByDate(LocalDate date) {
+        return pagamentoRepository.findByDataPagamento(date).stream().map(pagamentoMapper::entityToDomain).toList();
     }
     @Override
     public PagamentoDomain newPagamentoModel(PagamentoDomain pagamento) {

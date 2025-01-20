@@ -3,7 +3,7 @@ package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entitie
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.StatusPagamento;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Enum.TipoPagamento;
 
-import java.util.Date;
+import java.time.LocalDate;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,7 +26,7 @@ public class PagamentoEntity {
         private double valorPagamento;
         private String cpfCobrador;
         private String recebedorPagamento;
-        private Date dataPagamento;
+        private LocalDate dataPagamento;
 
         @Enumerated(EnumType.STRING)
         private TipoPagamento tipoPagamento;

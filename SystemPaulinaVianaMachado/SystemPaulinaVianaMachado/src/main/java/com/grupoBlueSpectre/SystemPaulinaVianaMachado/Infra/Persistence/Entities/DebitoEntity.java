@@ -1,6 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
     
 
+import java.time.LocalDate;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +22,7 @@ public class DebitoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private LocalDate dataDebito;
     private double valorDebito;
     private String cpfCobrador;
     private String descricaoConta;
@@ -28,6 +31,5 @@ public class DebitoEntity {
     @ManyToOne
     @JoinColumn(name = "idPagamento")
     private PagamentoEntity pagamento;
-
 
 }

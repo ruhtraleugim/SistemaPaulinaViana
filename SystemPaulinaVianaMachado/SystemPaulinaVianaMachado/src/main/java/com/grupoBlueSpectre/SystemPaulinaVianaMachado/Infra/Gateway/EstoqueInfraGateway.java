@@ -1,8 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.EstoqueGateway;
@@ -10,6 +12,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Estoque.Estoq
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.EstoquePersistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.EstoqueEntity;
 
+@Service
 public class EstoqueInfraGateway implements EstoqueGateway{
 
     private final EstoquePersistence estoqueRepository;
@@ -28,8 +31,8 @@ public class EstoqueInfraGateway implements EstoqueGateway{
         return estoqueRepository.findAll().stream().map(estoqueMapper::entityToDomain).toList();
     }
     @Override
-    public List<EstoqueDomain> getEstoqueByDate(Date date) {
-        return estoqueRepository.findByDate(date).stream().map(estoqueMapper::entityToDomain).toList();
+    public List<EstoqueDomain> getEstoqueByDate(LocalDate date) {
+        return estoqueRepository.findByDataEstoque(date).stream().map(estoqueMapper::entityToDomain).toList();
     }
     @Override
     public void deletarEstoque(Long ID) {
@@ -42,7 +45,7 @@ public class EstoqueInfraGateway implements EstoqueGateway{
         return estoqueMapper.entityToDomain(savedEntity);
     }
     @Override
-    public EstoqueDomain alterarEstoque(EstoqueDomain estoque, Long iD) {
+    public EstoqueDomain updateEstoque(EstoqueDomain estoque, Long iD) {
         EstoqueEntity entity = estoqueMapper.toEntity(estoque);
         estoqueRepository.updadeEstoque(entity, iD);
         return estoqueMapper.entityToDomain(entity);

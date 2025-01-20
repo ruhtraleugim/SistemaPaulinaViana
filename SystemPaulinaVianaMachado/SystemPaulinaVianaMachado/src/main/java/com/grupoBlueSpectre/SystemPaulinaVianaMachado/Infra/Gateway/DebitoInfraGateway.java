@@ -1,8 +1,10 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.DebitoDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.DebitoGateway;
@@ -10,6 +12,7 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Debito.Debito
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.DebitoPersistence;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.DebitoEntity;
 
+@Service
 public class DebitoInfraGateway implements DebitoGateway {
 
     private final DebitoPersistence debitoRepository;
@@ -30,7 +33,7 @@ public class DebitoInfraGateway implements DebitoGateway {
         return debitoRepository.findAll().stream().map(debitoMapper::entityToDomain).toList();
     }
     @Override
-    public List<DebitoDomain> getDebitosByDate(Date date) {
+    public List<DebitoDomain> getDebitosByDate(LocalDate date) {
         return debitoRepository.findByDataDebito(date).stream().map(debitoMapper::entityToDomain).toList();
     }
     @Override
@@ -40,5 +43,11 @@ public class DebitoInfraGateway implements DebitoGateway {
     @Override
     public Optional<DebitoDomain> getDebitosByID(Long ID) {
         return debitoRepository.findById(ID).map(debitoMapper::entityToDomain);
+    }
+    @Override
+    public DebitoDomain AlterarDebito(DebitoDomain debito, Long ID) {
+        DebitoEntity entity = debitoMapper.toEntity(debito);
+        debitoRepository.updateDebito(entity, ID);
+        return debitoMapper.entityToDomain(entity);
     }
 }

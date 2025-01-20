@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Pagamento;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
@@ -15,7 +15,7 @@ public class BuscarPagamentoPorDataUseCaseImpl implements BuscarPorDataUseCase<P
         this.pagamentoGateway = pagamentoGateway;
     }
     @Override
-    public List<PagamentoDomain> execute(Date date) {
+    public List<PagamentoDomain> execute(LocalDate date) {
         return pagamentoGateway.getPagamentoByDate(date);
     }
 }

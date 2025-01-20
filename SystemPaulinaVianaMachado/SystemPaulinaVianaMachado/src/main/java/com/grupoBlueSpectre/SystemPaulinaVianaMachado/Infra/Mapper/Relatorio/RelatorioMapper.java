@@ -1,5 +1,8 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Relatorio;
 
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Component;
+
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.RelatorioDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Dto.RelatorioDTO;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.MapperInteface;
@@ -7,12 +10,13 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Estoque.Estoq
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Venda.VendaMapper;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.RelatorioEntity;
 
+@Component
 public class RelatorioMapper implements MapperInteface<RelatorioDomain, RelatorioDTO, RelatorioEntity> {
 
     private final EstoqueMapper estoqueMapper;
     private final VendaMapper vendaMapper;
 
-    private RelatorioMapper( EstoqueMapper estoqueMapper,VendaMapper vendaMapper) {
+    private RelatorioMapper(@Lazy EstoqueMapper estoqueMapper,@Lazy VendaMapper vendaMapper) {
         this.estoqueMapper = estoqueMapper;
         this.vendaMapper = vendaMapper;
     }

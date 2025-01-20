@@ -11,15 +11,21 @@ import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities
 
 import jakarta.transaction.Transactional;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Repository
 public interface PagamentoPersistence extends JpaRepository<PagamentoEntity, Long> {
 
-    Optional<PagamentoEntity> findByDate(Date date);
+    Optional<PagamentoEntity> findByDataPagamento(LocalDate dataPagamento);
 
     @Modifying
     @Transactional
-    @Query
-    PagamentoEntity updatePagamento(PagamentoEntity entity, Long ID);
+    @Query("UPDATE PAGAMENTO p SET p.valorPagamento = :valorPagamento, " +
+        "p.cpfCobrador = :cpfCobrador, " +
+        "p.recebedorPagamento = :recebedorPagamento, " +
+        "p.dataPagamento = :dataPagamento, " +
+        "p.tipoPagamento = :tipoPagamento, " +
+        "p.statusPagamento = :statusPagamento " +
+        "WHERE p.idPagamento = :idPagamento")
+    PagamentoEntity updatePagamento(PagamentoEntity entity, Long id);
 }

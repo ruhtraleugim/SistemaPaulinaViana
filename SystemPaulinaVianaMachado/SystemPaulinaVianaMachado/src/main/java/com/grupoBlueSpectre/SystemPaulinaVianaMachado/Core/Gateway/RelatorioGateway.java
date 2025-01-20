@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +13,7 @@ public interface RelatorioGateway {
 
         List<RelatorioDomain> getRelatorio();
 
-        List<RelatorioDomain> getRelatorioByDate(Date date);
+        List<RelatorioDomain> getRelatorioByDate(LocalDate date);
 
         void deleteRelatorio(Long ID);
 

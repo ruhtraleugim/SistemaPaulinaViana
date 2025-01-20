@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Usecases.Estoque;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.EstoqueDomain;
@@ -15,7 +15,7 @@ public class BuscarEstoquePorDataUseCaseImpl implements BuscarPorDataUseCase<Est
         this.estoqueGateway = estoqueGateway;
     }
     @Override
-    public List<EstoqueDomain> execute(Date date) {
+    public List<EstoqueDomain> execute(LocalDate date) {
         return estoqueGateway.getEstoqueByDate(date);
     }  
 }

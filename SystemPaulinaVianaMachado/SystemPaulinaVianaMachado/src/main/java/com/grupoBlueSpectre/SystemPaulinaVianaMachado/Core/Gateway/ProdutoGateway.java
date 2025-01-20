@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,7 +12,7 @@ public interface ProdutoGateway {
 
         Optional<ProdutoDomain> getProdutoByNome(String nomeProduto);
 
-        List<ProdutoDomain> getProdutoByDate(Date date);
+        List<ProdutoDomain> getProdutoByDate(LocalDate date);
 
         List<ProdutoDomain> getProduto();
 

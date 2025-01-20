@@ -1,6 +1,6 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,7 +18,7 @@ public class EstoqueEntity {
 
     private int versaoEstoque;
     private int quantidadeProduto;
-    private Date dataEstoque;
+    private LocalDate dataEstoque;
 
     @ManyToOne
     @JoinColumn(name = "idFornecedor")
