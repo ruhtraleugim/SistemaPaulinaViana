@@ -18,5 +18,5 @@ public interface PagamentoGateway {
 
         PagamentoDomain alterarPagamentoModel(Long ID, PagamentoDomain pagamento);
 
-        Void deletePagamento(Long ID);
+        void deletePagamento(Long ID);
 }

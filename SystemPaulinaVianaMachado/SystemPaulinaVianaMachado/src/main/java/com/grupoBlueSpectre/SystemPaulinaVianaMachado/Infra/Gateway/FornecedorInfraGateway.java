@@ -5,42 +5,45 @@ import java.util.Optional;
 
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.FornecedorDomain;
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Gateway.FornecedorGateway;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Mapper.Fornecedor.FornecedorMapper;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.FornecedorPercistence;
+import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities.FornecedorEntity;
 
 public class FornecedorInfraGateway implements FornecedorGateway{
 
+    private final FornecedorPercistence fornecedorRepository;
+    private final FornecedorMapper fornecedorMapper;
+
+    public FornecedorInfraGateway(FornecedorPercistence fornecedorRepository, FornecedorMapper fornecedorMapper) {
+        this.fornecedorRepository = fornecedorRepository;
+        this.fornecedorMapper = fornecedorMapper;
+    }
     @Override
     public Optional<FornecedorDomain> getFornecedorByID(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFornecedorByID'");
+        return fornecedorRepository.findById(ID).map(fornecedorMapper::entityToDomain);
     }
- 
     @Override
     public Optional<FornecedorDomain> getForncedorByName(String nome) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getForncedorByName'");
+        return fornecedorRepository.findByNome(nome).map(fornecedorMapper::entityToDomain);
     }
-
     @Override
     public List<FornecedorDomain> getFornecedores() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFornecedores'");
+        return fornecedorRepository.findAll().stream().map(fornecedorMapper::entityToDomain).toList();
     }
-
     @Override
     public FornecedorDomain newFornecedor(FornecedorDomain fornecedor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newFornecedor'");
+       FornecedorEntity fornecedorEntity = fornecedorMapper.toEntity(fornecedor);
+       FornecedorEntity savedEntity = fornecedorRepository.save(fornecedorEntity);
+       return fornecedorMapper.entityToDomain(savedEntity);
     }
-
     @Override
-    public Void deleteFornecedor(Long ID) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteFornecedor'");
+    public void deleteFornecedor(Long ID) {
+        fornecedorRepository.deleteById(ID);
     }
-
     @Override
     public FornecedorDomain alterarFornecedor(Long ID, FornecedorDomain fornecedor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'alterarFornecedor'");
+        FornecedorEntity fornecedorEntity = fornecedorMapper.toEntity(fornecedor);
+        fornecedorRepository.updadeEstoque(fornecedorEntity, ID);
+        return fornecedorMapper.entityToDomain(fornecedorEntity);
     }   
 }

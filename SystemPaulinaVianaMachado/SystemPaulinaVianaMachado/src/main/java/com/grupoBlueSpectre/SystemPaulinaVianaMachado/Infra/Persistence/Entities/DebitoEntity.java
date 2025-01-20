@@ -1,6 +1,5 @@
 package com.grupoBlueSpectre.SystemPaulinaVianaMachado.Infra.Persistence.Entities;
     
-
 import com.grupoBlueSpectre.SystemPaulinaVianaMachado.Core.Domain.PagamentoDomain;
 
 import jakarta.persistence.*;

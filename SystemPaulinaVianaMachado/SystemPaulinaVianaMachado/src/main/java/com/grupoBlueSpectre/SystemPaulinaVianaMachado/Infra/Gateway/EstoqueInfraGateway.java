@@ -29,7 +29,7 @@ public class EstoqueInfraGateway implements EstoqueGateway{
     }
     @Override
     public List<EstoqueDomain> getEstoqueByDate(Date date) {
-        return estoqueRepository.findByDataEntrada(date).stream().map(estoqueMapper::entityToDomain).toList();
+        return estoqueRepository.findByDate(date).stream().map(estoqueMapper::entityToDomain).toList();
     }
     @Override
     public void deletarEstoque(Long ID) {

@@ -15,7 +15,7 @@ public interface FornecedorGateway {
 
         FornecedorDomain newFornecedor(FornecedorDomain fornecedor);
 
-        Void deleteFornecedor(Long ID);
+        void deleteFornecedor(Long ID);
         
         FornecedorDomain alterarFornecedor(Long ID, FornecedorDomain fornecedor);
 }

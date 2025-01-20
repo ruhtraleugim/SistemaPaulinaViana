@@ -26,8 +26,10 @@ public class FornecedorEntity {
     private String fornecedorNome;
     private String fornecedorTelefone;
     private String fornecedorEmail;
+
     @Enumerated(EnumType.STRING)
     private TipoProduto tipoProduto;
+
     @ManyToMany()
     @JoinColumn(name = "idProduto")
     private ProdutoEntity produto;;
